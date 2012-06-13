@@ -1,7 +1,7 @@
 var descriptions = {
 'app' : 'Core application (app) code, including models, views, controllers, and helpers',
 'app/assets' : 'Applications assets such as cascading style sheets (CSS), JavaScript files, and images',
-'app/assets/stylesheets' : '',
+'app/assets/stylesheets' : 'judyta',
 'app/assets/stylesheets/application.css' : '',
 'app/assets/javascripts' : '',
 'app/assets/javascripts/application.js' : '',
