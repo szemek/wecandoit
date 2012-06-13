@@ -15,7 +15,7 @@ var descriptions = {
 'app/assets/javascripts/application.js' : 'monika opanuje was ',
 'app/assets/images' : 'Przemek dziekujemy',
 'app/assets/images/rails.png' : '',
-'app/controllers' : '',
+'app/controllers' : ' jestesmy najlepsza grupa srodowa pod sloncem',
 'app/controllers/application_controller.rb' : '',
 'app/helpers' : '',
 'app/helpers/application_helper.rb' : '',
