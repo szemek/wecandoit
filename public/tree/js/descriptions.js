@@ -2,10 +2,17 @@ var descriptions = {
 'app' : 'Core application (app) code, including models, views, controllers, and helpers',
 'app/assets' : 'Applications assets such as cascading style sheets (CSS), JavaScript files, and images',
 'app/assets/stylesheets' : 'judyta',
+<<<<<<< HEAD
 'app/assets/stylesheets/application.css' : 'Monika',
 'app/assets/javascripts' : 'Paula strikes back!',
 'app/assets/javascripts/application.js' : 'File with JavaScript for application',
 'app/assets/images' : '',
+=======
+'app/assets/stylesheets/application.css' : 'monika opanuje was ',
+'app/assets/javascripts' : 'monika opanuje was ',
+'app/assets/javascripts/application.js' : 'monika opanuje was ',
+'app/assets/images' : 'judyta opanuje was ',
+>>>>>>> 5cc60da597a02b006e40e6a7de671ac00a5f3671
 'app/assets/images/rails.png' : '',
 'app/controllers' : '',
 'app/controllers/application_controller.rb' : '',
