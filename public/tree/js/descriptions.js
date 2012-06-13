@@ -5,7 +5,7 @@ var descriptions = {
 'app/assets/stylesheets/application.css' : 'monika opanuje was ',
 'app/assets/javascripts' : 'monika opanuje was ',
 'app/assets/javascripts/application.js' : 'monika opanuje was ',
-'app/assets/images' : 'judyta opanuje was ',
+'app/assets/images' : 'Przemek dziekujemy',
 'app/assets/images/rails.png' : '',
 'app/controllers' : '',
 'app/controllers/application_controller.rb' : '',
