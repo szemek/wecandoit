@@ -4,7 +4,7 @@ var descriptions = {
 'app/assets/stylesheets' : 'judyta',
 'app/assets/stylesheets/application.css' : 'monika opanuje was ',
 'app/assets/javascripts' : 'judyta opanuje was ',
-'app/assets/javascripts/application.js' : 'judyta opanuje was ',
+'app/assets/javascripts/application.js' : 'monika opanuje was ',
 'app/assets/images' : 'judyta opanuje was ',
 'app/assets/images/rails.png' : '',
 'app/controllers' : '',
