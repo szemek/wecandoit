@@ -11,7 +11,7 @@ var descriptions = {
 'app/controllers/application_controller.rb' : '',
 'app/helpers' : 'Monika opanuje Nas :)',
 'app/helpers/application_helper.rb' : '',
-'app/mailers' : 'Judyta takze opanowywuje :)',
+'app/mailers' : 'nowy opis testowy',
 'app/models' : 'Wojtek jest modelem na Fejsie. NOT.',
 'app/views' : '',
 'app/views/layouts' : '',
