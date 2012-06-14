@@ -1,7 +1,7 @@
 var descriptions = {
 'app' : 'Core application (app) code, including models, views, controllers, and helpers',
 'app/assets' : 'Applications assets such as cascading style sheets (CSS), JavaScript files, and images',
-'app/assets/stylesheets' : 'Monikaaa',
+'app/assets/stylesheets' : 'Felipe is awesome',
 'app/assets/stylesheets/application.css' : 'Monika',
 'app/assets/javascripts' : 'Paula strikes back!!!',
 'app/assets/javascripts/application.js' : '',
