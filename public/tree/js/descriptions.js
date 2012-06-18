@@ -12,7 +12,7 @@ var descriptions = {
 'app/helpers' : 'Monika opanuje Nas :)',
 'app/helpers/application_helper.rb' : '',
 'app/mailers' : 'nowy opis testowy',
-'app/models' : 'Wojtek jest modelem na Fejsie. NOT.',
+'app/models' : 'The models subdirectory holds the classes that model and wrap the data stored in database.',
 'app/views' : '',
 'app/views/layouts' : '',
 'app/views/layouts/application.html.erb' : '',
