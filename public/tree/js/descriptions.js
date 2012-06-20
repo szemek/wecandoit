@@ -3,7 +3,7 @@ var descriptions = {
 'app/assets' : 'Applications assets such as cascading style sheets (CSS), JavaScript files, and images',
 'app/assets/stylesheets' : 'Lidka sorry, nie by³o Ciê dziœ ^^',
 'app/assets/stylesheets/application.css' : 'Monika rules',
-'app/assets/javascripts' : 'Paula forget about striking back!!!',
+'app/assets/javascripts' : 'Paula never forgets about striking back!!!',
 'app/assets/javascripts/application.js' : 'WOJTEK mamy cie na facebooku',
 'app/assets/images/rails.png' : 'Judyta zostajesz w tyle! ale pamietaj nie poddawaj sie!',
 'app/controllers' : 'The controllers subdirectory is where Rails looks to find controller classes; controller handles a web request from the user',
