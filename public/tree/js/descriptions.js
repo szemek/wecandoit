@@ -29,7 +29,7 @@ var descriptions = {
 'config/initializers/wrap_parameters.rb' : 'start, do pracy rodacy!',
 'config/initializers/backtrace_silencers.rb' : '',
 'config/initializers/inflections.rb' : '',
-'config/environments' : '',
+'config/environments' : 'otoczenie czeka na wyjasnienie',
 'config/environments/production.rb' : '',
 'config/environments/test.rb' : '',
 'config/environments/development.rb' : '',
