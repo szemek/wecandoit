@@ -15,7 +15,7 @@ var descriptions = {
 'app/models' : 'The models subdirectory holds the classes that model and wrap the data stored in database',
 'app/views' : 'The views subdirectory holds display templates to fill in with data from application, convert to HTML, and return to the browser',
 'app/views/layouts' : 'Holds the template files for layouts to be used with views; this models the common header/footer method of wrapping views; in your views, define a layout using the <tt>layout :default</tt> and create a file named default.rhtml; inside default.rhtml, call <% yield %> to render the view using this layout',
-'app/views/layouts/application.html.erb' : '',
+'app/views/layouts/application.html.erb' : 'Tu bedziemy sie spelniac estetycznie',
 'config' : 'Application configuration; this directory contains the small amount of configuration code that application will need, including database configuration (in database.yml), Rails environment structure (environment.rb), and routing of incoming web requests (routes.rb); you can also tailor the behavior of the three Rails environments for test, development, and deployment with files found in the environments directory',
 'config/application.rb' : '',
 'config/boot.rb' : '',
