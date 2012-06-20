@@ -3,7 +3,7 @@ var descriptions = {
 'app/assets' : 'Applications assets such as cascading style sheets (CSS), JavaScript files, and images',
 'app/assets/stylesheets' : 'Lidka sorry, nie by³o Ciê dziœ ^^',
 'app/assets/stylesheets/application.css' : 'Monika nie atakuj mnie tak bardzo i tak ci sie nie uda bede szybsza ;) J.',
-'app/assets/javascripts' : 'Paula strikes back!!!',
+'app/assets/javascripts' : 'Paula strikes back for the second time!!!',
 'app/assets/javascripts/application.js' : '',
 'app/assets/images' : 'Przemek dziekujemy',
 'app/assets/images/rails.png' : '',
