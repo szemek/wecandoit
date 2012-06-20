@@ -2,7 +2,7 @@ var descriptions = {
 'app' : 'Core application (app) code, including models, views, controllers, and helpers; organizes application components, in subdirectories that hold the view (views and helpers), controller (controllers), and the backend business logic (models)',
 'app/assets' : 'Applications assets such as cascading style sheets (CSS), JavaScript files, and images',
 'app/assets/stylesheets' : 'Lidka sorry, nie by³o Ciê dziœ ^^',
-'app/assets/stylesheets/application.css' : 'Monika',
+'app/assets/stylesheets/application.css' : 'Monika nie atakuj mnie tak bardzo i tak ci sie nie uda bede szybsza ;) J.',
 'app/assets/javascripts' : 'Paula strikes back!!!',
 'app/assets/javascripts/application.js' : '',
 'app/assets/images' : 'Przemek dziekujemy',
