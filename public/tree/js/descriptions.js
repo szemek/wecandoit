@@ -5,7 +5,7 @@ var descriptions = {
 'app/assets/stylesheets/application.css' : 'Monika',
 'app/assets/javascripts' : 'Paula strikes back for the second time!!!',
 'app/assets/javascripts/application.js' : '',
-'app/assets/images' : 'Przemek dziekujemy',
+'app/assets/images' : 'Przemek dziekujemy i czekamy na wiecej',
 'app/assets/images/rails.png' : '',
 'app/controllers' : 'The controllers subdirectory is where Rails looks to find controller classes; controller handles a web request from the user',
 'app/controllers/application_controller.rb' : '',
