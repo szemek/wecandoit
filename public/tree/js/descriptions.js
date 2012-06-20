@@ -26,7 +26,7 @@ var descriptions = {
 'config/initializers/mime_types.rb' : '2',
 'config/initializers/session_store.rb' : '1',
 'config/initializers/secret_token.rb' : '0',
-'config/initializers/wrap_parameters.rb' : 'start',
+'config/initializers/wrap_parameters.rb' : 'start, do pracy rodacy!',
 'config/initializers/backtrace_silencers.rb' : '',
 'config/initializers/inflections.rb' : '',
 'config/environments' : '',
