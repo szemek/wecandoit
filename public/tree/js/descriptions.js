@@ -3,13 +3,8 @@ var descriptions = {
 'app/assets' : 'Applications assets such as cascading style sheets (CSS), JavaScript files, and images',
 'app/assets/stylesheets' : 'Lidka sorry, nie by³o Ciê dziœ ^^',
 'app/assets/stylesheets/application.css' : 'Monika nie atakuj mnie tak bardzo i tak ci sie nie uda bede szybsza ;) J.',
-<<<<<<< HEAD
 'app/assets/javascripts' : 'Bez pushowana dzien stracony! Judyta nie poddawaj sie!',
-'app/assets/javascripts/application.js' : '',
-=======
-'app/assets/javascripts' : 'Paula strikes back for the second time!!! a TY nie pushuj tyle!! ',
 'app/assets/javascripts/application.js' : 'WOJTEK mamy cie na facebooku',
->>>>>>> 9883c66d35de92e1c7b4ae974b80c3c578c31fe2
 'app/assets/images' : 'Przemek dziekujemy i czekamy na wiecej',
 'app/assets/images/rails.png' : '',
 'app/controllers' : 'The controllers subdirectory is where Rails looks to find controller classes; controller handles a web request from the user',
