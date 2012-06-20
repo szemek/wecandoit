@@ -20,7 +20,7 @@ var descriptions = {
 'config/application.rb' : '',
 'config/boot.rb' : '',
 'config/database.yml' : 'zaczynamy zabawe',
-'config/routes.rb' : 'kto pierwszy ten lepszy',
+'config/routes.rb' : 'kto pierwszy ten lepszy, a kto drugi bardziej doswiadczony',
 'config/environment.rb' : '4',
 'config/initializers' : '3',
 'config/initializers/mime_types.rb' : '2',
