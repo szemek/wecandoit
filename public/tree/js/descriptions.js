@@ -6,7 +6,7 @@ var descriptions = {
 'app/assets/javascripts' : 'Bez pushowana dzien stracony! Judyta nie poddawaj sie!',
 'app/assets/javascripts/application.js' : 'WOJTEK mamy cie na facebooku',
 'app/assets/images' : 'Przemek dziekujemy i czekamy na wiecej',
-'app/assets/images/rails.png' : '',
+'app/assets/images/rails.png' : 'Judyta zostajesz w tyle! ale pamietaj nie poddawaj sie!',
 'app/controllers' : 'The controllers subdirectory is where Rails looks to find controller classes; controller handles a web request from the user',
 'app/controllers/application_controller.rb' : '',
 'app/helpers' : 'The helpers subdirectory holds any helper classes used to assist the model, view, and controller classes. This helps to keep the model, view, and controller code small, focused, and uncluttered',
