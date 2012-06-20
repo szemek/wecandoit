@@ -18,7 +18,7 @@ var descriptions = {
 'app/views/layouts/application.html.erb' : 'Tu bedziemy sie spelniac estetycznie',
 'config' : 'Application configuration; this directory contains the small amount of configuration code that application will need, including database configuration (in database.yml), Rails environment structure (environment.rb), and routing of incoming web requests (routes.rb); you can also tailor the behavior of the three Rails environments for test, development, and deployment with files found in the environments directory',
 'config/application.rb' : '',
-'config/boot.rb' : '',
+'config/boot.rb' : 'gitwars trwa',
 'config/database.yml' : 'zaczynamy zabawe',
 'config/routes.rb' : 'kto pierwszy ten lepszy, a kto drugi bardziej doswiadczony',
 'config/environment.rb' : '4',
