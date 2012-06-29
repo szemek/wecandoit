@@ -12,6 +12,7 @@ group :test do
   gem 'rspec-rails', '>= 2.10.1'
   gem 'spork', '>= 0.9.2'
   gem 'guard-spork', '>= 1.1.0'
+  gem 'spork-testunit', '>= 0.0.8'
 end
 
 group :production do
