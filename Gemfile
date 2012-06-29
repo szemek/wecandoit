@@ -6,8 +6,12 @@ gem 'haml-rails', '>= 0.3.4'
 
 group :development, :test do
   gem 'sqlite3'
+end
+
+group :test do
   gem 'rspec-rails', '>= 2.10.1'
   gem 'spork', '>= 0.9.2'
+  gem 'guard-spork', '>= 1.1.0'
 end
 
 group :production do
