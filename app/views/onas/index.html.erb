@@ -1,0 +1,25 @@
+<h1>Listing onas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @onas.each do |ona| %>
+  <tr>
+    <td><%= ona.name %></td>
+    <td><%= ona.info %></td>
+    <td><%= link_to 'Show', ona %></td>
+    <td><%= link_to 'Edit', edit_ona_path(ona) %></td>
+    <td><%= link_to 'Destroy', ona, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ona', new_ona_path %>
