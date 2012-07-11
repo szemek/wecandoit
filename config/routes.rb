@@ -1,7 +1,8 @@
 Webmuses::Application.routes.draw do
-    root :to => 'home#index'
-    resources :onas
 
+  root :to => 'home#index'
+  resources :onas
+  resources :links
   get "home/index"
 
   # The priority is based upon order of creation:
