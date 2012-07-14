@@ -4,6 +4,10 @@ gem 'rails', '3.2.5'
 gem 'jquery-rails'
 gem 'haml-rails', '>= 0.3.4'
 
+gem 'choices'
+gem 'oauth2'
+gem 'oauth'
+
 group :development, :test do
   gem 'sqlite3'
 end
