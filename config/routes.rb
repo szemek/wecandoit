@@ -5,6 +5,12 @@ Webmuses::Application.routes.draw do
   resources :links
   get "home/index"
 
+  get "/oauth/github" => 'oauth/github#new'
+  get "/oauth/github/callback" => 'oauth/github#create'
+
+  get "/login" => 'oauth/sessions#new'
+  get "/logout" => 'oauth/sessions#destroy'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
