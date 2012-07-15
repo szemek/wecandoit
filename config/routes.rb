@@ -1,5 +1,7 @@
 Webmuses::Application.routes.draw do
 
+  resources :questions
+
   root :to => 'home#index'
   resources :links
   resources :home
