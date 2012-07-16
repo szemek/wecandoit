@@ -1,4 +1,4 @@
-= form_for @answer do |f|
+= form_for [@question, @answer] do |f|
   -if @answer.errors.any?
     #error_explanation
       %h2= "#{pluralize(@answer.errors.count, "error")} prohibited this answer from being saved:"
@@ -7,8 +7,7 @@
           %li= msg
 
   .field
-    = f.label :question_id
-    = f.number_field :question_id
+    = f.hidden_field :question_id
   .field
     = f.label :content
     = f.text_area :content

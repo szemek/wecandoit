@@ -1,5 +1,7 @@
-
 class QuestionsController < ApplicationController
+
+  before_filter :authenticate_user
+
   # GET /questions
   # GET /questions.json
   def index
@@ -15,6 +17,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.json
   def show
     @question = Question.find(params[:id])
+    @answers = @question.answers
 
     respond_to do |format|
       format.html # show.html.erb
