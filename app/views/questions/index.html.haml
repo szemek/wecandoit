@@ -1,21 +1,13 @@
-%h1 Listing questions
+.container
+  .header
+    = image_tag 'questions_and_answers.png'
+    %h1 Pytania i odpowiedzi
 
-%table
-  %tr
-    %th Title
-    %th Content
-    %th
-    %th
-    %th
+  .questions
+    - @questions.each do |question|
+      .question-box
+        .question-summary
+          %h3= link_to question.title, question
 
-  - @questions.each do |question|
-    %tr
-      %td= question.title
-      %td= question.content
-      %td= link_to 'Show', question
-      %td= link_to 'Edit', edit_question_path(question)
-      %td= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Question', new_question_path
+  .new-question
+    = link_to 'Zadaj pytanie', new_question_path
