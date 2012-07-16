@@ -3,6 +3,11 @@
     %h1= @question.title
   .content
     = @question.content
+  .answers
+    %h3 Odpowiedzi
+    %ul
+      - @answers.each do |answer|
+        %li= answer.content
 
   = link_to 'Odpowiedz', new_question_answer_path(@question)
 
