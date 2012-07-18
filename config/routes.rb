@@ -2,6 +2,7 @@ Webmuses::Application.routes.draw do
 
   root :to => 'home#index'
   resources :links
+  resources :home
   get "home/index"
   get '/about' => 'home#about'
 
