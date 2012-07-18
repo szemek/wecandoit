@@ -20,13 +20,6 @@ ActiveRecord::Schema.define(:version => 20120714200731) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "onas", :force => true do |t|
-    t.string   "name"
-    t.string   "info"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "avatar_url"
