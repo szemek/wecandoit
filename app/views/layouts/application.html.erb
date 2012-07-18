@@ -11,22 +11,20 @@
 </head>
 <body>
 	<div class="wrapper">
-            
-		            
-			<div class="navbar navbar-fixed-top">
-			  <div class="navbar-inner">
-			    <div class="container">		
-					<ul class="nav">  
-			     	 <li class="active">  
-			     	   <a class="brand" href="home">Ruby on Rails #{w_środy}</a>  
-			     	 </li>  
-			    	 <li><a href="onas">Kim jesteśmy i co robimy :)</a></li>  
-			     	 <li><a href="links">Linki, linki, linki</a></li>
-			     	 <li><a href="tree" target="_blank">Drzewo katalogów</a></li>  
-			    	</ul>  
-			    </div>
-			  </div>
-			</div> 
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="active">
+              <a class="brand" href="home">Ruby on Rails #{w_środy}</a>
+            </li>
+            <li><%= link_to 'Kim jesteśmy i co robimy :)', about_path %></li>
+            <li><%= link_to 'Linki, linki, linki', links_path %></li>
+            <li><%= link_to 'Drzewo katalogów', '/tree', :target => '_blank' %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 		</br></br></br>
 
@@ -35,7 +33,6 @@
     </div>
     <div class="footer">
     	<p>Ruby Wednesday (c) 2012</p></p>	
-        
     </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
