@@ -14,12 +14,18 @@
       <div class="navbar-inner">
         <div class="container">
           <ul class="nav">
-            <li class="active">
+            <li <%= 'class=active' if current_page?(root_path) %>>
               <%= link_to 'Ruby on Rails #{w_środy}', root_path %>
             </li>
-            <li><%= link_to 'Kim jesteśmy i co robimy :)', about_path %></li>
-            <li><%= link_to 'Linki, linki, linki', links_path %></li>
-            <li><%= link_to 'Drzewo katalogów', '/tree', :target => '_blank' %></li>
+            <li <%= 'class=active' if current_page?(about_path) %>>
+              <%= link_to 'Kim jesteśmy i co robimy :)', about_path %>
+            </li>
+            <li <%= 'class=active' if current_page?(links_path) %>>
+              <%= link_to 'Linki, linki, linki', links_path %>
+            </li>
+            <li>
+              <%= link_to 'Drzewo katalogów', '/tree', :target => '_blank' %>
+            </li>
           </ul>
         </div>
       </div>
