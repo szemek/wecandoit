@@ -12,14 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label :title, "Tytuł" %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :address, "Link" %>
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description, "Opis" %>
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Dodaj" %>
   </div>
 <% end %>
