@@ -1,4 +1,5 @@
 class Oauth::GithubController < ApplicationController
+  include ApplicationHelper
   skip_before_filter :authenticate_user
 
   def new
