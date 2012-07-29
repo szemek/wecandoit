@@ -27,6 +27,9 @@
               <%= link_to 'Drzewo katalogów', '/tree', :target => '_blank' %>
             </li>
           </ul>
+          <% if controller_name != 'sessions' && current_user.present? %>
+            <%= render 'layouts/navbar' %>
+          <% end %>
         </div>
       </div>
     </div>
