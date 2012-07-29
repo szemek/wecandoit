@@ -5,7 +5,7 @@
       <div class="link">
         <h3>
           <%= link_to link.title, link.address %>
-          <span class="gray"><%= link_to link.address, link.address %></span>
+          <span class="gray"><%= link_to link.address.truncate(75), link.address %></span>
         </h3>
         <p><%= link.description %></p>
       </div>
