@@ -1,6 +1,8 @@
 class QuestionsController < ApplicationController
 
-  #before_filter :authenticate_user
+  before_filter :authenticate_user,
+                :except => [:index, :show],
+                :if => lambda { Rails.env.production? }
 
   # GET /questions
   def index
