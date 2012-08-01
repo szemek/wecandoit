@@ -11,13 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120724060644) do
+ActiveRecord::Schema.define(:version => 20120801061609) do
+
+  create_table "admin_notes", :force => true do |t|
+    t.string   "resource_id",   :null => false
+    t.string   "resource_type", :null => false
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.text     "body"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
     t.text     "content"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
   end
 
   create_table "links", :force => true do |t|
@@ -33,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20120724060644) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
