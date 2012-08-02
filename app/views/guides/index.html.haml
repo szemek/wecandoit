@@ -1,0 +1,21 @@
+%h1 Listing guides
+
+%table
+  %tr
+    %th Title
+    %th Content
+    %th
+    %th
+    %th
+
+  - @guides.each do |guide|
+    %tr
+      %td= guide.title
+      %td= guide.content
+      %td= link_to 'Show', guide
+      %td= link_to 'Edit', edit_guide_path(guide)
+      %td= link_to 'Destroy', guide, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Guide', new_guide_path

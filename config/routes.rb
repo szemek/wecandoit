@@ -1,4 +1,6 @@
 Webmuses::Application.routes.draw do
+  resources :guides
+
   resources :questions do
     resources :answers
   end
