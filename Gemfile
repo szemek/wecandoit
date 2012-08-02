@@ -7,6 +7,8 @@ gem 'haml-rails', '>= 0.3.4'
 gem 'choices'
 gem 'oauth2'
 gem 'oauth'
+gem 'redcarpet'
+gem 'pygmentize'
 
 group :development, :test do
   gem 'sqlite3'
