@@ -5,7 +5,7 @@
   = @guide.title
 %p
   %b Content:
-  = @guide.content
+  = markdown @guide.content
 
 = link_to 'Edit', edit_guide_path(@guide)
 \|
