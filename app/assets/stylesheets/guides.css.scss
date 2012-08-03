@@ -1,0 +1,51 @@
+.guides {
+  margin-top: 20px;
+  border: 1px dotted #aaa;
+}
+
+.guide {
+  padding: 20px;
+}
+
+.guide:nth-child(even) {
+  background-color: #eee;
+}
+
+h3 {
+  font-size: 28px;
+  color: black;
+  margin-bottom: 0;
+}
+
+
+.guides h3 a {
+  color: black;
+  text-decoration: none;
+}
+
+.guides h3 a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h3 span.gray a {
+  color: gray;
+  font-size: 20px;
+}
+
+#guide_title {
+  width: 300px;
+}
+
+#guide_address {
+  width: 300px;
+}
+
+#guide_description {
+  width: 300px;
+  height: 100px;
+}
+
+#new_guide .field {
+  display: inline;
+}
