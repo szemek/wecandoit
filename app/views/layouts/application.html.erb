@@ -23,8 +23,15 @@
             <li <%= 'class=active' if current_page?(links_path) %>>
               <%= link_to 'Linki, linki, linki', links_path %>
             </li>
-            <li>
-              <%= link_to 'Drzewo katalogów', '/tree', :target => '_blank' %>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+                Materiały<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'Drzewo katalogów', '/tree', :target => '_blank' %></li>
+                <li class="divider"></li>
+                <li><%= link_to 'Przewodniki', guides_path %></li>
+              </ul>
             </li>
           </ul>
           <% if controller_name != 'sessions' && current_user.present? %>
