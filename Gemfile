@@ -19,6 +19,7 @@ group :test do
   gem 'spork', '>= 0.9.2'
   gem 'guard-spork', '>= 1.1.0'
   gem 'spork-testunit', '>= 0.0.8'
+  gem 'guard-rspec'
 end
 
 group :production do
