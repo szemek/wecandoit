@@ -1,12 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @guide.title
-%p
-  %b Content:
-  = markdown @guide.content
+%h1= @guide.title
 
-= link_to 'Edit', edit_guide_path(@guide)
+= markdown @guide.content
+
+= link_to 'Edycja', edit_guide_path(@guide)
 \|
-= link_to 'Back', guides_path
+= link_to 'Wróć do listy', guides_path
