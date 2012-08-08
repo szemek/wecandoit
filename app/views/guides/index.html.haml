@@ -1,0 +1,11 @@
+%h1 Przewodniki
+.guides
+  - @guides.each do |guide|
+    .guide
+      %h3= link_to guide.title, guide
+      = link_to 'Edytuj', edit_guide_path(guide)
+      = link_to 'Usuń', guide, :confirm => 'Na pewno?', :method => :delete
+
+%br
+
+= link_to 'Nowy przewodnik', new_guide_path

@@ -7,6 +7,9 @@ gem 'haml-rails', '>= 0.3.4'
 gem 'choices'
 gem 'oauth2'
 gem 'oauth'
+gem 'redcarpet'
+gem 'pygmentize'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'sqlite3'
@@ -17,6 +20,7 @@ group :test do
   gem 'spork', '>= 0.9.2'
   gem 'guard-spork', '>= 1.1.0'
   gem 'spork-testunit', '>= 0.0.8'
+  gem 'guard-rspec'
 end
 
 group :production do
