@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%h1= @guide.title
+
+= markdown @guide.content
+
+= link_to 'Edycja', edit_guide_path(@guide)
+\|
+= link_to 'Wróć do listy', guides_path

@@ -1,13 +1,12 @@
-.container
-  .header
-    = image_tag 'questions_and_answers.png'
-    %h1 Pytania i odpowiedzi
+.header
+  = image_tag 'questions_and_answers.png'
+  %h1 Pytania i odpowiedzi
 
-  .questions
-    - @questions.each do |question|
-      .question-box
-        .question-summary
-          %h3= link_to question.title, question
+.questions
+  - @questions.each do |question|
+    .question-box
+      .question-summary
+        %h3= link_to question.title, question
 
-  .new-question
-    = link_to 'Zadaj pytanie', new_question_path
+.new-question
+  = link_to 'Zadaj pytanie', new_question_path

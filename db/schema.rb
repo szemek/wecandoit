@@ -11,17 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801061609) do
-
-  create_table "admin_notes", :force => true do |t|
-    t.string   "resource_id",   :null => false
-    t.string   "resource_type", :null => false
-    t.integer  "user_id"
-    t.string   "user_type"
-    t.text     "body"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
+ActiveRecord::Schema.define(:version => 20120802224658) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -31,12 +21,26 @@ ActiveRecord::Schema.define(:version => 20120801061609) do
     t.integer  "user_id"
   end
 
+  create_table "guides", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "links", :force => true do |t|
     t.string   "address"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "title"
+  end
+
+  create_table "onas", :force => true do |t|
+    t.string   "name"
+    t.string   "info"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "questions", :force => true do |t|
