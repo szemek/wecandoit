@@ -24,13 +24,13 @@ body {
   display:block;
   text-decoration:none;
   border:1px dashed #fff;
-  background:url(../images/icon-file.gif) 5px 50% no-repeat;
+  background:url(/assets/tree/icon-file.gif) 5px 50% no-repeat;
 }
 .tree li a.tree-parent {
-  background:url(../images/icon-folder-open.gif) 5px 50% no-repeat;
+  background:url(/assets/tree/icon-folder-open.gif) 5px 50% no-repeat;
 }
 .tree li a.tree-parent-collapsed {
-  background:url(../images/icon-folder.gif) 5px 50% no-repeat;
+  background:url(/assets/tree/icon-folder.gif) 5px 50% no-repeat;
 }
 .tree li a:hover,.tree li a.tree-parent:hover,.tree li a:focus,.tree li a.tree-parent:focus,.tree li a.tree-item-active {
   color:#000;
