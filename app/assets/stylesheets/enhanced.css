@@ -47,8 +47,3 @@ body {
 .tree ul.tree-group-collapsed {
   display:none;
 }
-#description{
-	position: fixed;
-  top: 30px;
-  left: 450px;
-}
