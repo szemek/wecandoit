@@ -10,6 +10,7 @@ Webmuses::Application.routes.draw do
   resources :home
   get "home/index"
   get '/about' => 'home#about'
+  get '/tree' => 'home#tree'
 
   get "/oauth/github" => 'oauth/github#new'
   get "/oauth/github/callback" => 'oauth/github#create'
