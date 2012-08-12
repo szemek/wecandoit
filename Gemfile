@@ -13,8 +13,7 @@ gem 'bootstrap-sass'
 
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'thin'
+  gem 'sqlite3'  
 end
 
 group :test do
