@@ -1,7 +1,22 @@
+$navbarBackgroundHighlight: #B22222;
+$navbarBackground: #8B0000;
+$navbarText: #EEEEEE;
+$navbarLinkColor: #F5DEB3;
+$navbarLinkColorHover: #FFA500;
+$navbarLinkColorActive: #FFFFFF;
+$navbarLinkBackgroundActive: transparent;
+$navbarLinkBackgroundHover: transparent;
+
 @import "bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 
 html, body {
 	height: 100%;
+}
+
+.center {
+  text-align: center;
 }
 
 .wrapper {
@@ -12,10 +27,81 @@ html, body {
 }
 
 .footer, .push {
-	height: 4em;
-	text-align: center;
+	height: 4em;	
 }
 
-.footer {
-	color: DeepPink;
+.footer {	
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px dashed #DCDCDC;
+  color: #708090;
+  a {
+    color: #7CFC00;
+    &:hover { 
+      color: #FF1493;
+    }
+  }  
+  small { 
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+    color: DeepPink;
+  }
+  ul {
+    float: left;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+.navbar {
+  .navbar-inner div > span ul a, .nav a {
+     font-size: 16px;
+     padding-top: 12px;
+     padding-bottom: 12px;
+     font-family: 'Droid Sans', sans-serif;
+     text-transform: uppercase;
+  }
+  #logo {
+    float: left;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 20px;    
+    color: white;
+    text-transform: none;
+    padding-top: 10px;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  .active {
+    font-weight: bold;
+  }
+  .dropdown-menu {
+    &:before {
+      border-bottom-color: #CCC;
+    }
+    &:after {
+      border-bottom-color: Red;
+    }
+  }
+  div > ul .menu-dropdown, .nav .menu-dropdown, .topbar div > ul .dropdown-menu, .nav .dropdown-menu {
+    background-color: White;
+    li {
+      a {
+        font-size: 12px;
+        background: White;
+        color: Black;
+        &:hover {
+          font-size: 12px;
+          color: #FFA500;
+          background-color: #B22222;
+        }
+      }
+    }
+  }
 }
