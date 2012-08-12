@@ -37,6 +37,13 @@ ActiveRecord::Schema.define(:version => 20120808201318) do
     t.string   "title"
   end
 
+  create_table "onas", :force => true do |t|
+    t.string   "name"
+    t.string   "info"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "questions", :force => true do |t|
     t.string   "title"
     t.text     "content"
