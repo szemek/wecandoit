@@ -11,8 +11,10 @@ gem 'redcarpet'
 gem 'pygmentize'
 gem 'bootstrap-sass'
 
+
 group :development, :test do
   gem 'sqlite3'
+  gem 'thin'
 end
 
 group :test do
