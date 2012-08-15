@@ -7,6 +7,8 @@ $navbarLinkColorActive: #FFFFFF;
 $navbarLinkBackgroundActive: transparent;
 $navbarLinkBackgroundHover: transparent;
 
+$sansFontFamily: 'Peralta', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 @import "bootstrap";
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
@@ -59,9 +61,9 @@ html, body {
 
 .navbar {
   .navbar-inner div > span ul a, .nav a {
-     font-size: 16px;
-     padding-top: 12px;
-     padding-bottom: 12px;
+     font-size: 14px;
+     padding-top: 13px;
+     padding-bottom: 13px;
      font-family: 'Droid Sans', sans-serif;
      text-transform: uppercase;
   }
