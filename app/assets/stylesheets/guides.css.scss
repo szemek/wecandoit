@@ -40,6 +40,12 @@ h3 span.gray a {
 #guide_content {
   width: 900px;
   height: 400px;
+  font: 12px 'Courier New', Courier, monospace;
+  padding: 5px 5px 5px 5px;
+  background: white no-repeat;
+  clear: both;
+  line-height: 18px;
+  overflow: auto;
 }
 
 #new_guide .field {
