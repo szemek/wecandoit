@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Webmuses::Application.load_tasks
+WeCanDoIt::Application.load_tasks
