@@ -25,16 +25,16 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -4em;
+	margin: 0 auto -80px;
 }
 
 .footer, .push {
-	height: 4em;	
+  padding-top: 40px;
+	height: 80px;
+  clear: both;
 }
 
 .footer {	
-  margin-top: 45px;
-  padding-top: 5px;
   border-top: 1px dashed #DCDCDC;
   color: #708090;
   a {
@@ -46,7 +46,6 @@ html, body {
   small { 
     float: right;
     margin-right: 10px;
-    margin-top: 15px;
     color: DeepPink;
   }
   ul {
@@ -61,9 +60,9 @@ html, body {
 
 .navbar {
   .navbar-inner div > span ul a, .nav a {
-     font-size: 14px;
-     padding-top: 13px;
-     padding-bottom: 13px;
+     font-size: 16px;
+     padding-top: 12px;
+     padding-bottom: 12px;
      font-family: 'Droid Sans', sans-serif;
      text-transform: lowercase;
   }
