@@ -13,15 +13,17 @@ gem 'bootstrap-sass'
 
 
 group :development, :test do
-  gem 'sqlite3'  
-end
-
-group :test do
-  gem 'rspec-rails', '>= 2.10.1'
-  gem 'spork', '>= 0.9.2'
-  gem 'guard-spork', '>= 1.1.0'
-  gem 'spork-testunit', '>= 0.0.8'
+  gem 'sqlite3'
+  gem 'awesome_print'
+  gem 'rspec-rails'
+  gem 'guard'
   gem 'guard-rspec'
+  gem 'spork'
+  gem 'guard-spork'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 
 group :production do
