@@ -1,4 +1,4 @@
-Webmuses::Application.routes.draw do
+WeCanDoIt::Application.routes.draw do
   resources :guides
 
   resources :questions do
