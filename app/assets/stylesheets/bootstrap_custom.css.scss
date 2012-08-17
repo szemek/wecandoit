@@ -7,7 +7,7 @@ $navbarLinkColorActive: #FFFFFF;
 $navbarLinkBackgroundActive: transparent;
 $navbarLinkBackgroundHover: transparent;
 
-$sansFontFamily: 'Peralta', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 @import "bootstrap";
 
@@ -21,20 +21,22 @@ html, body {
   text-align: center;
 }
 
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -80px;
+#wrap {
+  min-height: 100%;
 }
 
-.footer, .push {
+#main {
+  overflow: auto;
   padding-top: 40px;
-	height: 80px;
-  clear: both;
+  padding-bottom: 150px; /* bigger than footer height */
 }
 
-.footer {	
+.footer {
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear: both;
+  padding-top: 10px;
   border-top: 1px dashed #DCDCDC;
   color: #708090;
   a {
@@ -94,11 +96,11 @@ html, body {
     background-color: White;
     li {
       a {
-        font-size: 12px;
+        font-size: 14px;
         background: White;
         color: Black;
         &:hover {
-          font-size: 12px;
+          font-size: 14px;
           color: #FFA500;
           background-color: #B22222;
         }
