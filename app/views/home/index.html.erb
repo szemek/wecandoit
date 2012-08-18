@@ -8,7 +8,7 @@
     <div class="well center">
     	Ostatnio dodany link: 
     	<% odnosnik = Link.last! %>
-    	<%= link_to odnosnik.title, odnosnik %>
+    	<%= link_to odnosnik.title, links_path %>
     </br>
     	Ostatnio dodany przewodnik: 
     	<% przewodnik = Guide.last! %>
