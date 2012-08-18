@@ -3,3 +3,16 @@
     <p><%= image_tag 'we_can_do_it.jpg' %></p>
   </div>  
 </div>
+<div class="row">
+  <div class="span10 offset1">
+    <div class="well center">
+    	Ostatnio dodany link: 
+    	<% odnosnik = Link.last! %>
+    	<%= link_to odnosnik.title, odnosnik %>
+    </br>
+    	Ostatnio dodany przewodnik: 
+    	<% przewodnik = Guide.last! %>
+    	<%= link_to przewodnik.title, przewodnik %>
+    </div>
+  </div>
+</div>
