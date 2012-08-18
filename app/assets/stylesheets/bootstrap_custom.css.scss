@@ -11,10 +11,12 @@ $sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 @import "bootstrap";
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
-
 html, body {
 	height: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro';
 }
 
 .center {
@@ -38,6 +40,7 @@ html, body {
   clear: both;
   padding-top: 10px;
   border-top: 1px dashed #DCDCDC;
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
   color: #708090;
   a {
     color: #7CFC00;
