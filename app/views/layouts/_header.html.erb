@@ -11,7 +11,7 @@
             <li <%= 'class=active' if current_page?(links_path) %>>
               <%= link_to 'Linki', links_path %>
             </li>
-            <li class="dropdown <%= ' active' if current_page?(:controller => 'guides') || current_page?(tree_path) %>">
+            <li class="dropdown <%= ' active' if nav_helper('guides') || current_page?(tree_path) %>">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
                 Materiały <b class="caret"></b>
               </a>
