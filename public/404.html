@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+  <title>RubyWednesday - 404! Brak strony</title>
   <style type="text/css">
     body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
+    a {
+      color: Yellow;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: Blue;
+    }
+
     div.dialog {
       width: 25em;
       padding: 0 4em;
@@ -11,16 +21,19 @@
       border: 1px solid #ccc;
       border-right-color: #999;
       border-bottom-color: #999;
+      background-color: #8B0000;
+      color: White;
     }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+    h1 { font-size: 100%; color: #FFF; line-height: 1.5em; }
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
+    <h1>Oops, seems like after all we can't do it :).</h1>
+    <h2>Błąd 404</h2>
+    <p>Strona o podanym adresie aktualnie nie istnieje.</br></br>Sprawdź poprawność wpisanego adresu </br>lub przejdź na stronę <a href="http://we-can-do-it.herokuapp.com">główną</a>.</p>
   </div>
 </body>
 </html>
