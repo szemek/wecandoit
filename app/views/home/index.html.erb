@@ -1,18 +1,14 @@
 <div class="row center">
   <div class="span12">
     <p><%= image_tag 'we_can_do_it.jpg' %></p>
-  </div>  
+  </div>
 </div>
 <div class="row">
   <div class="span10 offset1">
     <div class="well center">
-    	Ostatnio dodany link: 
-    	<% odnosnik = Link.last! %>
-    	<%= link_to odnosnik.title, links_path %>
+      Ostatnio dodany link: <%= last_link %>
     </br>
-    	Ostatnio dodany przewodnik: 
-    	<% przewodnik = Guide.last! %>
-    	<%= link_to przewodnik.title, przewodnik %>
+      Ostatnio dodany przewodnik: <%= last_guide %>
     </div>
   </div>
 </div>
