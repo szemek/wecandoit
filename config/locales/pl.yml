@@ -1,0 +1,23 @@
+pl:
+  activerecord:
+    attributes:
+      link:
+        title: "Tytuł"
+        address: "Adres URL"
+      guide:
+        title: "Tytuł"
+        content: "Treść"
+    errors:
+      models:
+        guide:
+          attributes:
+            title:
+              blank: "jest wymagany"
+            content:
+              blank: "jest wymagana"
+        link:
+          attributes:
+            title:
+              blank: "jest wymagany"
+            address:
+              blank: "jest wymagany"

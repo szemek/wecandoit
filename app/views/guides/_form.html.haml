@@ -1,7 +1,7 @@
 = form_for @guide do |f|
   -if @guide.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@guide.errors.count, "error")} prohibited this guide from being saved:"
+      %h2 Operacja nie powiodła się:
       %ul
         - @guide.errors.full_messages.each do |msg|
           %li= msg
@@ -16,4 +16,4 @@
     = f.label :content
     = f.text_area :content
   .actions
-    = f.submit 'Save'
+    = f.submit 'Zapisz', :class => 'btn btn-success'
