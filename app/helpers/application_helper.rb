@@ -17,6 +17,10 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(PygmentizeHTML, options)
     markdown.render(text).html_safe
   end
+
+  def nav_helper(arg)
+    controller_name == arg
+  end
 end
 
 class PygmentizeHTML < Redcarpet::Render::HTML

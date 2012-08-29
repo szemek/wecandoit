@@ -2,54 +2,20 @@
 <html>
 <head>
 <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-  <title>Ruby Wednesdays</title>  
+  <title>We can do it! &raquo; <%= yield(:title) %></title>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin-ext,latin' rel='stylesheet' type='text/css'>   
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="wrapper">
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <ul class="nav">
-            <li <%= 'class=active' if current_page?(root_path) %>>
-              <%= link_to 'Ruby on Rails #{w_środy}', root_path %>
-            </li>
-            <li <%= 'class=active' if current_page?(about_path) %>>
-              <%= link_to 'Kim jesteśmy i co robimy :)', about_path %>
-            </li>
-            <li <%= 'class=active' if current_page?(links_path) %>>
-              <%= link_to 'Linki, linki, linki', links_path %>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
-                Materiały<b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to 'Drzewo katalogów', '/tree', :target => '_blank' %></li>
-                <li class="divider"></li>
-                <li><%= link_to 'Przewodniki', guides_path %></li>
-              </ul>
-            </li>
-          </ul>
-          <% if controller_name != 'sessions' && current_user.present? %>
-            <%= render 'layouts/navbar' %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-		</br></br></br>
-    <div class='container'>
-  	 <%= yield %>
-    </div>
-    <div class="push"></div>
-  </div>
-  <div class="footer">
-    <p>Ruby Wednesday (c) 2012</p></p>	
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<%= render 'layouts/header' %>
+  <div id="wrap">
+    <div id="main" class="container clear-top">
+     	 <%= yield %>
+    </div><!-- main -->
+  </div><!-- wrap -->
+  <%= render 'layouts/footer' %>
 </body>
 </html>
