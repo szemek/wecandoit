@@ -1,21 +1,115 @@
+$navbarBackgroundHighlight: #B22222;
+$navbarBackground: #8B0000;
+$navbarText: #EEEEEE;
+$navbarLinkColor: #F5DEB3;
+$navbarLinkColorHover: #FFA500;
+$navbarLinkColorActive: #FFFFFF;
+$navbarLinkBackgroundActive: transparent;
+$navbarLinkBackgroundHover: transparent;
+
+$btnPrimaryBackground: #585858;
+
+$sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 @import "bootstrap";
 
 html, body {
 	height: 100%;
 }
 
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -4em;
+h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-.footer, .push {
-	height: 4em;
-	text-align: center;
+.center {
+  text-align: center;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-top: 40px;
+  padding-bottom: 150px; /* bigger than footer height */
 }
 
 .footer {
-	color: DeepPink;
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear: both;
+  padding-top: 10px;
+  border-top: 1px dashed #DCDCDC;
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  color: #708090;
+  a {
+    color: #7CFC00;
+    &:hover { 
+      color: #FF1493;
+    }
+  }  
+  small { 
+    float: right;
+    margin-right: 10px;
+    color: DeepPink;
+  }
+  ul {
+    float: left;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+.navbar {
+  .navbar-inner div > span ul a, .nav a {
+     font-size: 16px;
+     padding-top: 12px;
+     padding-bottom: 12px;
+     font-family: 'Droid Sans', sans-serif;
+     text-transform: lowercase;
+  }
+  #logo {
+    float: left;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 20px;    
+    color: white;
+    text-transform: none;
+    padding-top: 10px;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  .active {
+    font-weight: bold;
+  }
+  .dropdown-menu {
+    &:before {
+      border-bottom-color: #CCC;
+    }
+    &:after {
+      border-bottom-color: Red;
+    }
+  }
+  div > ul .menu-dropdown, .nav .menu-dropdown, .topbar div > ul .dropdown-menu, .nav .dropdown-menu {
+    background-color: White;
+    li {
+      a {
+        font-size: 14px;
+        background: White;
+        color: Black;
+        &:hover {
+          font-size: 14px;
+          color: #FFA500;
+          background-color: #B22222;
+        }
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 <%= form_for(@link) do |f| %>
   <% if @link.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
+      <h2>Operacja nie powiodła się:</h2>
 
       <ul>
       <% @link.errors.full_messages.each do |msg| %>
@@ -16,7 +16,7 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :address, "Link" %>
+    <%= f.label :address, "Adres URL" %>
     <%= f.text_field :address %>
   </div>
   <div class="field">
@@ -24,6 +24,6 @@
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit "Dodaj", :class => 'btn btn-success' %>
+    <%= f.submit "Zapisz", :class => 'btn btn-success' %>
   </div>
 <% end %>
