@@ -1,0 +1,31 @@
+#new-project-button {
+  margin-top: 20px;
+}
+
+.projects {
+  width: 100%;
+}
+
+$wide: 250px;
+
+.project-box {
+  float: left;
+  margin: 10px 10px 0 0;
+  border: 1px dotted #aaa;
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: $wide;
+  height: $wide;
+
+  strong {
+    display: block;
+  }
+}
+
+.project-info {
+  height: 50%;
+}
+
+.half {
+  width: 50%;
+}
