@@ -1,7 +1,9 @@
 WeCanDoIt::Application.routes.draw do
-  resources :projects
-
   resources :guides
+
+  resources :projects do
+    member { get 'details' }
+  end
 
   resources :questions do
     resources :answers
