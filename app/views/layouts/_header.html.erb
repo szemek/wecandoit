@@ -8,6 +8,9 @@
             <li <%= 'class=active' if current_page?(about_path) %>>
               <%= link_to 'O nas', about_path %>
             </li>
+            <li <%= 'class=active' if current_page?(projects_path) %>>
+              <%= link_to 'Projekty', projects_path %>
+            </li>
             <li <%= 'class=active' if current_page?(links_path) %>>
               <%= link_to 'Linki', links_path %>
             </li>
