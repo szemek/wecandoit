@@ -7,10 +7,10 @@
           %li= msg
 
   .field
-    = f.label :user
+    = f.label :user, 'Login na Githubie'
     = f.text_field :user
   .field
-    = f.label :repo
+    = f.label :repo, 'Nazwa repozytorium na Githubie'
     = f.text_field :repo
   .actions
-    = f.submit 'Save'
+    = f.submit 'Dodaj', :class => 'btn btn-success'
