@@ -1,21 +1,26 @@
-%h1 Listing projects
+%h1 Nasze projekty
 
-%table
-  %tr
-    %th User
-    %th Repo
-    %th
-    %th
-    %th
+#new-project-button
+  = link_to '+ Nowy projekt', new_project_path, :class => 'btn btn-success'
 
+.projects
   - @projects.each do |project|
-    %tr
-      %td= project.user
-      %td= project.repo
-      %td= link_to 'Show', project
-      %td= link_to 'Edit', edit_project_path(project)
-      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Project', new_project_path
+    .project-box{'data-project' => project.id}
+      .project-info
+        .pull-left.half
+          = image_tag 'logos/octocat.png'
+        .pull-left.half
+          %strong Login:
+          %span= github_user(project.user)
+          %strong Repozytorium:
+          %span= github_repo(project.user, project.repo)
+      .project-details
+        .description
+          %strong Opis projektu:
+          %span
+        .last-commit-message
+          %strong Ostatni commit:
+          %span
+        .last-commit-date
+          %strong Data ostatniego commitu:
+          %span
