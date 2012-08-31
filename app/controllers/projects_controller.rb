@@ -21,6 +21,15 @@ class ProjectsController < ApplicationController
     end
   end
 
+  # GET /project/1/details.json
+  def details
+    project = Project.find(params[:id])
+    details = GithubData.new(project.user, project.repo)
+    details.fetch!
+
+    render json: details
+  end
+
   # GET /projects/new
   # GET /projects/new.json
   def new
