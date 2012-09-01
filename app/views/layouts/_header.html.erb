@@ -8,10 +8,10 @@
             <li <%= 'class=active' if current_page?(about_path) %>>
               <%= link_to 'O nas', about_path %>
             </li>
-            <li <%= 'class=active' if current_page?(projects_path) %>>
+            <li <%= 'class=active' if nav_helper('projects') %>>
               <%= link_to 'Projekty', projects_path %>
             </li>
-            <li <%= 'class=active' if current_page?(links_path) %>>
+            <li <%= 'class=active' if nav_helper('links') %>>
               <%= link_to 'Linki', links_path %>
             </li>
             <li class="dropdown <%= ' active' if nav_helper('guides') || current_page?(tree_path) %>">
