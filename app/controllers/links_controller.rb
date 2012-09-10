@@ -1,4 +1,6 @@
 class LinksController < ApplicationController
+  load_and_authorize_resource
+
   # GET /links
   # GET /links.json
   def index
