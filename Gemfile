@@ -10,7 +10,8 @@ gem 'oauth'
 gem 'redcarpet'
 gem 'pygmentize'
 gem 'bootstrap-sass'
-
+gem 'cancan'
+gem 'rolify'
 
 group :development, :test do
   gem 'sqlite3'
