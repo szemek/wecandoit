@@ -24,9 +24,8 @@
                 <li><%= link_to 'Przewodniki', guides_path %></li>
               </ul>
             </li>
-            <% if controller_name != 'sessions' && current_user.present? %>
-              <%= render 'layouts/navbar' %>
-            <% end %>
+            <li class='divider-vertical'></li>
+            <%= render 'layouts/navbar' %>
           </ul>
         </div>
       </div>
