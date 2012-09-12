@@ -11,13 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-li.logos {
-  line-height: 40px;
-}
-li.logos img {
-  vertical-align: middle;
-  width: 20px;
-  margin-top: -5px;
-  line-height: 30px;
-}
