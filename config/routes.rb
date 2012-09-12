@@ -19,8 +19,8 @@ WeCanDoIt::Application.routes.draw do
   get "/oauth/github" => 'oauth/github#new'
   get "/oauth/github/callback" => 'oauth/github#create'
 
-  get "/login" => 'oauth/sessions#new'
-  get "/logout" => 'oauth/sessions#destroy'
+  get "/login" => 'oauth/sessions#new', :as => :login
+  get "/logout" => 'oauth/sessions#destroy', :as => :logout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
