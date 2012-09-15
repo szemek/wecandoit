@@ -1,8 +1,7 @@
 - provide(:title, 'Projekty')
 %h1 Nasze projekty
 
-#new-project-button
-  = link_to '+ Nowy projekt', new_project_path, :class => 'btn btn-success'
+= link_to '+ Nowy projekt', new_project_path, :class => 'btn btn-primary'
 
 .projects
   - @projects.each do |project|
