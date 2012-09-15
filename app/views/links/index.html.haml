@@ -1,0 +1,13 @@
+﻿- provide(:title, 'Linki')
+%h1 Linki
+
+= link_to '+ Nowy link', new_link_path, :class => 'btn btn-primary'
+
+.links
+  - @links.each do |link|
+    .link
+      %h3
+        = link_to link.title, link.address
+        %span.gray= link_to link.address.truncate(75), link.address
+      %p= link.description
+
