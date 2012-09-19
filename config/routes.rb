@@ -15,6 +15,7 @@ WeCanDoIt::Application.routes.draw do
   get "home/index"
   get '/about' => 'home#about'
   get '/tree' => 'home#tree'
+  get '/calendar' => 'home#calendar'
 
   get "/oauth/github" => 'oauth/github#new'
   get "/oauth/github/callback" => 'oauth/github#create'
