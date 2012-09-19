@@ -2,10 +2,10 @@
   %li.avatar
     = image_tag current_user.avatar_url
   %li.dropdown
-    %a.dropdown-toggle.home{ :href => '#', 'data-toggle' => "dropdown"}
+    %a.dropdown-toggle.home{ :href => '#', 'data-toggle' => "dropdown", :class => 'active'}
       = current_user.username
       %b.caret
     %ul.dropdown-menu
       %li= link_to 'Logout', logout_path
 - else
-  %li= link_to 'Login', login_path
+  %li{ :class => if nav_helper('sessions') then 'active' end }= link_to 'Login', login_path
