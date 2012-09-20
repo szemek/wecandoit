@@ -11,9 +11,9 @@
           = image_tag 'logos/octocat.png'
         .pull-left.half
           %strong Login:
-          %span= github_user(project.user)
+          %span= github_user(project.username)
           %strong Repozytorium:
-          %span= github_repo(project.user, project.repo)
+          %span= github_repo(project.username, project.repo)
       .project-details
         .description
           %strong Opis projektu:
