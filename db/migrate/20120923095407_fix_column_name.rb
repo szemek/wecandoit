@@ -5,6 +5,7 @@ class FixColumnName < ActiveRecord::Migration
   end
 
   def down
+    add_index :guides, :slug, unique: false
     rename_column :guides, :slug, :seo_url
   end
 end
