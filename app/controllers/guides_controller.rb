@@ -15,15 +15,9 @@ class GuidesController < ApplicationController
   # GET /guides/1
   # GET /guides/1.json
   def show
-    id = params[:id].to_i
-    if id == 0
-      @guide = Guide.find_by_seo_url(params[:id])
-    else
-      @guide = Guide.find(params[:id])
-    end
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @guide }
+    @guide = Guide.find(params[:id])
+    if request.path != guide_path(@guide)
+      redirect_to @guide, status: :moved_permanently
     end
   end
 
