@@ -12,6 +12,7 @@ gem 'pygmentize'
 gem 'bootstrap-sass'
 gem 'cancan'
 gem 'rolify'
+gem 'friendly_id', '>= 4.0.1'
 
 group :development, :test do
   gem 'sqlite3'
