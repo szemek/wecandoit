@@ -13,4 +13,12 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by_id(session[:user_id])
   end
   helper_method :current_user
+
+  before_filter :domain_redirection
+
+  def domain_redirection
+    if request.host != Rails.configuration.domain
+      redirect_to("http://#{Rails.configuration.domain}")
+    end
+  end
 end

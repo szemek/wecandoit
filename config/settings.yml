@@ -3,6 +3,7 @@ defaults: &defaults
   github:
     token: <%= ENV['GITHUB_APP_ID'] %>
     secret: <%= ENV['GITHUB_SECRET'] %>
+  domain: 'wecandoit.onrails.pl'
 
 test:
   github:
