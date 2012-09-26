@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   before_filter :domain_redirection
 
   def domain_redirection
-    if request.host != Rails.configuration.domain
+    if Rails.env.production? && request.host != Rails.configuration.domain
       redirect_to("http://#{Rails.configuration.domain}")
     end
   end
