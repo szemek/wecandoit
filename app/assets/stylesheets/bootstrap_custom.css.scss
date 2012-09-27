@@ -45,15 +45,20 @@ h1, h2, h3, h4 {
   font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
   color: #708090;
   a {
-    color: #7CFC00;
+    color: #08C;
     &:hover { 
-      color: #FF1493;
+      color: DeepPink;
     }
   }  
   small { 
     float: right;
     margin-right: 10px;
     color: DeepPink;
+  }
+  .kontakt {
+    float: left;
+    margin-left: 10px;
+    color: Cyan;
   }
   ul {
     float: left;
