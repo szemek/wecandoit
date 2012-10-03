@@ -14,6 +14,8 @@
           %span= github_user(project.username)
           %strong Repozytorium:
           %span= github_repo(project.username, project.repo)
+          %strong Strona:
+          %span= link_to project.website, project.website
       .project-details
         .description
           %strong Opis projektu:
