@@ -7,6 +7,7 @@
 $wide: 280px;
 
 .project-box {
+  position: relative;
   float: left;
   margin: 10px 10px 0 0;
   border: 1px dotted #aaa;
@@ -18,6 +19,22 @@ $wide: 280px;
   strong {
     display: block;
   }
+
+  .project-actions {
+    position: absolute;
+    background: transparent;
+    color: white;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition:    all 0.6s ease;
+    -o-transition:      all 0.6s ease;
+  }
+}
+
+.project-box:hover .project-actions {
+  opacity: 1;
 }
 
 .project-info {
