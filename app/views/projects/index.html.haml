@@ -27,3 +27,9 @@
         .last-commit-date
           %strong Data ostatniego commitu:
           %span
+      .project-actions
+        .btn-group
+          - if can?(:edit, project)
+            = link_to "Edytuj", edit_project_path(project), :class => "btn btn-success"
+          - if can?(:edit, project)
+            = link_to "Usuń", project_path(project), :confirm => 'Na pewno?', :method => :delete, :class => "btn btn-danger"
