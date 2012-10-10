@@ -13,6 +13,8 @@ gem 'bootstrap-sass'
 gem 'cancan'
 gem 'rolify'
 gem 'friendly_id', '>= 4.0.1'
+gem 'carrierwave'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'sqlite3'
