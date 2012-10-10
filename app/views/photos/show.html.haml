@@ -5,7 +5,7 @@
   = @photo.description
 %p
   %b Picture:
-  = @photo.picture
+  = image_tag(@photo.picture_url, :width => 600) if @photo.picture.present?
 
 = link_to 'Edit', edit_photo_path(@photo)
 \|
