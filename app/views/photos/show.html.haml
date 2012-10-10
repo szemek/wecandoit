@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @photo.description
+%p
+  %b Picture:
+  = @photo.picture
+
+= link_to 'Edit', edit_photo_path(@photo)
+\|
+= link_to 'Back', photos_path
