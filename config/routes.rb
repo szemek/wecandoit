@@ -1,4 +1,6 @@
 WeCanDoIt::Application.routes.draw do
+  resources :photos
+
   resources :guides
 
   resources :projects do
