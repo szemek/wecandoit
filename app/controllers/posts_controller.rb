@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
 
+    #@post.update_attribute(:name, User.find_by_id(session[:user_id])).username
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }

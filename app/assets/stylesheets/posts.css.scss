@@ -1,3 +1,53 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.posts {
+  font-size: 13px;
+  line-height: 18px;
+  width: 100%;
+}
+
+$wide: 95%;
+
+.post-box {
+  position: relative;
+  float: left;
+  margin: 10px 10px 0 0;
+  border: 1px solid ;
+  #border-radius: 20px;
+  padding: 10px 10px;
+  width: $wide;
+
+  strong {
+    display: block;
+  }
+
+  .project-actions {
+    position: absolute;
+    background: transparent;
+    color: white;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition:    all 0.6s ease;
+    -o-transition:      all 0.6s ease;
+  }
+}
+
+.project-box:hover .project-actions {
+  opacity: 1;
+}
+
+.project-info {
+  height: 50%;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.project-details {
+  margin-top: -20px;
+}
+
+.half {
+  width: 50%;
+}
