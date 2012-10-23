@@ -1,4 +1,6 @@
 WeCanDoIt::Application.routes.draw do
+  get "wall/index"
+
   resources :photos
 
   resources :guides
