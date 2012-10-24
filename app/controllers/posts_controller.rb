@@ -1,8 +1,15 @@
 class PostsController < ApplicationController
+  include ActionView::Helpers::DateHelper
+
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
+
+    #@user = session[:user_id]
+    @user = User.find(current_user.id).username
+
+    #@diff_date = distance_of_time_in_words(Time.now, Time.now + 3.minutes)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,6 +34,8 @@ class PostsController < ApplicationController
     @post = Post.new
 
     #@post.update_attribute(:name, User.find_by_id(session[:user_id])).username
+    @post.update_attribute(:date, DateTime.now)
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
