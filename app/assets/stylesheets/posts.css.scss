@@ -1,0 +1,46 @@
+.posts {
+  font-size: 13px;
+  line-height: 18px;
+  width: 100%;
+}
+
+$wide: 95%;
+
+.post-box {
+  position: relative;
+  float: left;
+  margin: 10px 10px 0 0;
+  border: 1px solid ;
+  #border-radius: 20px;
+  padding: 10px 10px;
+  width: $wide;
+
+  strong {
+    display: block;
+  }
+
+}
+
+span.date-info {
+  color: #aaa;
+}
+
+.project-box:hover .project-actions {
+  opacity: 1;
+}
+
+.project-info {
+  height: 50%;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.project-details {
+  margin-top: -20px;
+}
+
+.half {
+  width: 50%;
+}

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010190608) do
+ActiveRecord::Schema.define(:version => 20121024110330) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -43,16 +43,6 @@ ActiveRecord::Schema.define(:version => 20121010190608) do
 
   add_index "guides", ["slug"], :name => "index_guides_on_slug", :unique => true
 
-  create_table "issues", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "slug"
-  end
-
-  add_index "issues", ["slug"], :name => "index_issues_on_slug", :unique => true
-
   create_table "links", :force => true do |t|
     t.string   "address"
     t.text     "description"
@@ -67,6 +57,15 @@ ActiveRecord::Schema.define(:version => 20121010190608) do
     t.string   "picture"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.datetime "date"
+    t.integer  "user_id"
   end
 
   create_table "projects", :force => true do |t|
@@ -93,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20121010190608) do
     t.string   "access_token"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "post_id"
   end
 
 end
