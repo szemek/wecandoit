@@ -4,7 +4,7 @@
   - @posts.each do |post|
     .post-box
       = image_tag post.user.avatar_url, :class => "avatar"
-      %span{:title => post.date}= @user
+      %span{:title => post.date}= post.user.username
       %p= post.name 
       %p= post.content
       %span.date-info= distance_of_time_in_words(Time.now, post.date)
