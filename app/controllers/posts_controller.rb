@@ -4,12 +4,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse
 
-    #@user = session[:user_id]
     @user = User.find(current_user.id).username
-
-    #@diff_date = distance_of_time_in_words(Time.now, Time.now + 3.minutes)
 
     respond_to do |format|
       format.html # index.html.erb

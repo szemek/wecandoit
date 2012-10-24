@@ -4,15 +4,10 @@
   - @posts.each do |post|
     .post-box
       = image_tag post.user.avatar_url, :class => "avatar"
-      = @user + ' rzucił ' +  distance_of_time_in_words(Time.now, post.date)
+      %span{:title => post.date}= @user
       %p= post.name 
       %p= post.content
-
-
-      -#%td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-
+      %span.date-info= distance_of_time_in_words(Time.now, post.date)
 %br
 
 = link_to 'New Post', new_post_path
