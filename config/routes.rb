@@ -1,4 +1,7 @@
 WeCanDoIt::Application.routes.draw do
+
+  resources :posts
+
   resources :photos
 
   resources :guides
@@ -24,6 +27,12 @@ WeCanDoIt::Application.routes.draw do
 
   get "/login" => 'oauth/sessions#new', :as => :login
   get "/logout" => 'oauth/sessions#destroy', :as => :logout
+
+  get "wall" => 'wall#index'
+  
+  resources :users do
+    resources :posts
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
