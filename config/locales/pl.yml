@@ -1,12 +1,42 @@
 pl:
   datetime:
     distance_in_words:
+      half_a_minute: 'pół minuty temu'
+      less_than_x_seconds:
+        zero: 'mniej niż 1 sekunda temu'
+        one: '1 sekunda temu'
+        two: '2 sekundy temu'
+        three: '3 sekundy temu'
+        four: ' sekundy temu'
+        other: '%{count} sekund temu'
+      x_seconds:
+        one: '1 sekunda temu'
+        other: '%{count} sekund temu'
+      less_than_x_minutes:
+        zero: 'mniej niż minuta temu'
+        one: '1 minuta'
+        other: '%{count} minut temu'
       x_minutes:
-        one: "1 minuta"
-        other: "%{count} minut"
-      x_hours:
-        one: "1 godzina"
-        other: "%{count} godzin"
+        one: '1 minuta temu'
+        other: '%{count} minut temu'
+      about_x_hours:
+        one: 'około godzinę temu'
+        other: '%{count} godziny temu'
+      x_days:
+        one: '1 dzień temu'
+        other: '%{count} dni temu'
+      about_x_months:
+        one: 'około 1 miesiąca temu'
+        other: '%{count} miesięcy temu'
+      x_months:
+        one: '1 miesiąc temu'
+        other: '%{count} miesięcy temu'
+      about_x_years:
+        one: 'około 1 roku temu'
+        other: '%{count} lat temu'
+      over_x_years:
+        one: 'ponad rok temu'
+        other: '%{count} lat temu'
   activerecord:
     attributes:
       link:
