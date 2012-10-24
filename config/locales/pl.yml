@@ -1,4 +1,12 @@
 pl:
+  datetime:
+    distance_in_words:
+      x_minutes:
+        one: "1 minuta"
+        other: "%{count} minut"
+      x_hours:
+        one: "1 godzina"
+        other: "%{count} godzin"
   activerecord:
     attributes:
       link:
