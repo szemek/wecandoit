@@ -3,7 +3,7 @@
 .posts
   - @posts.each do |post|
     .post-box
-      = image_tag current_user.avatar_url, :class => "avatar"
+      = image_tag post.user.avatar_url, :class => "avatar"
       = @user + ' shouts around!' 
       = post.date
       %p= post.name 
