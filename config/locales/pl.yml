@@ -5,23 +5,20 @@ pl:
       less_than_x_seconds:
         zero: 'mniej niż 1 sekunda temu'
         one: '1 sekunda temu'
-        two: '2 sekundy temu'
-        three: '3 sekundy temu'
-        four: ' sekundy temu'
-        other: '%{count} sekund temu'
+        other: '%{count} sekund(y) temu'
       x_seconds:
         one: '1 sekunda temu'
-        other: '%{count} sekund temu'
+        other: '%{count} sekund(y) temu'
       less_than_x_minutes:
         zero: 'mniej niż minuta temu'
         one: '1 minuta'
-        other: '%{count} minut temu'
+        other: '%{count} minut(y) temu'
       x_minutes:
         one: '1 minuta temu'
-        other: '%{count} minut temu'
+        other: '%{count} minut(y) temu'
       about_x_hours:
         one: 'około godzinę temu'
-        other: '%{count} godziny temu'
+        other: '%{count} godzin(y) temu'
       x_days:
         one: '1 dzień temu'
         other: '%{count} dni temu'
