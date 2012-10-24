@@ -4,11 +4,10 @@
   - @posts.each do |post|
     .post-box
       = image_tag post.user.avatar_url, :class => "avatar"
-      = @user + ' shouts around!' 
-      = post.date
+      = @user + ' rzucił ' +  distance_of_time_in_words(Time.now, post.date)
       %p= post.name 
       %p= post.content
-      -#%p= distance_of_time_in_words(Time.now, post.date)
+
 
       -#%td= link_to 'Show', post
         %td= link_to 'Edit', edit_post_path(post)
