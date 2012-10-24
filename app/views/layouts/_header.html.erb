@@ -27,6 +27,13 @@
                 <li><%= link_to 'Przewodniki', guides_path %></li>
               </ul>
             </li>
+
+            <% if !current_user.nil? %>
+            <li <%= 'class=active' if current_page?(wall_path) %>>
+              <%= link_to 'Wall', wall_path %>
+              </li>
+            <% end %>
+
             <li class='divider-vertical'></li>
             <%= render 'layouts/navbar' %>
           </ul>
