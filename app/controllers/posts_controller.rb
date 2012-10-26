@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   include ActionView::Helpers::DateHelper
+  load_and_authorize_resource
 
   # GET /posts
   # GET /posts.json
