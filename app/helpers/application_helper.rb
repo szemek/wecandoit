@@ -17,6 +17,10 @@ module ApplicationHelper
   def nav_helper(arg)
     controller_name == arg
   end
+
+  def time_in_poland(date)
+    date.in_time_zone(ActiveSupport::TimeZone.new('Warsaw'))
+  end
 end
 
 class PygmentizeHTML < Redcarpet::Render::HTML

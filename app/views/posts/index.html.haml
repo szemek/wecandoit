@@ -7,7 +7,7 @@
       %span= post.user.username
       %p= post.name
       %p= post.content
-      %span.date-info{:title => post.date}= distance_of_time_in_words(Time.now, post.date)
+      %span.date-info{:title => time_in_poland(post.date)}= distance_of_time_in_words(Time.now, post.date)
 %br
 
 = link_to 'New Post', new_post_path
