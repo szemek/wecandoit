@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.reverse
+    @posts = Post.joins(:user).order('created_at DESC')
 
     @user = User.find(current_user.id).username
 
