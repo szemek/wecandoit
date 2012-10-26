@@ -3,12 +3,10 @@ class Ability
 
   def initialize(user)
     if user.present?
-      can :manage, Guide, :user_id => user.id
-      can :create, Guide
-      can :manage, Link, :user_id => user.id
-      can :create, Link
-      can :manage, Project, :user_id => user.id
-      can :create, Project
+      [Guide, Link, Project, Post].each do |resource|
+        can :manage, resource, :user_id => user.id
+        can :create, resource
+      end
     end
 
     can :read, :all
