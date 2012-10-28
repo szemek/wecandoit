@@ -31,10 +31,6 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
 
-    #@post.update_attribute(:name, User.find_by_id(session[:user_id])).username
-    @post.update_attribute(:date, DateTime.now)
-    @post.update_attribute(:user_id, current_user.id)
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -50,6 +46,8 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
+    @post.date = DateTime.now
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
