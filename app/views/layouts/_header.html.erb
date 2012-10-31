@@ -29,7 +29,7 @@
             </li>
 
             <% if !current_user.nil? %>
-            <li <%= 'class=active' if current_page?(wall_path) %>>
+            <li <%= 'class=active' if nav_helper('posts') %>>
               <%= link_to 'Wall', wall_path %>
               </li>
             <% end %>
