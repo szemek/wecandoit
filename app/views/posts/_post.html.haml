@@ -1,0 +1,6 @@
+.post-box
+  = image_tag post.user.avatar_url, :class => "avatar"
+  %span= post.user.username
+  %p= post.name
+  %p= raw post.content.gsub("\n","<br/>").html_safe
+  %span.date-info{:title => time_in_poland(post.date)}= distance_of_time_in_words(Time.now, post.date)
