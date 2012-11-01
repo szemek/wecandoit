@@ -3,7 +3,6 @@
     = image_tag post.user.avatar_url, :class => "post-avatar"
     %span.username= post.user.username
     %br
-    %span.date-info-small{:title => time_in_poland(post.date)}= time_in_poland(post.date).strftime("%d-%m-%Y godz. %H:%M")
+    %span.date-info-small{:title => time_in_poland(post.date)}= localize(time_in_poland(post.date))
   %p= post.name
   %p= raw auto_link(post.content.gsub("\n","<br/>"))
-  %span.date-info{:title => time_in_poland(post.date)}= distance_of_time_in_words(Time.now, post.date)
