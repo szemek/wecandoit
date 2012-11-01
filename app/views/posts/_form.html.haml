@@ -7,7 +7,7 @@
           %li= msg
 
   .field
-    = f.label :content
+    = f.label 'Wpisz wiadomość:'
     = f.text_area :content
   .actions
-    = f.submit 'Zapisz'
+    = f.submit 'Zapisz', :class => "btn btn-primary"

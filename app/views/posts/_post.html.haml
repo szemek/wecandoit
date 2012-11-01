@@ -4,4 +4,4 @@
     .post-username= post.user.username
     .post-dateinfo{:title => localize(time_in_poland(post.date))}
       = distance_of_time_in_words(Time.now, post.date)
-  %p= raw auto_link(post.content.gsub("\n","<br/>"))
+  %p.comment= raw auto_link(post.content.gsub("\n","<br/>"))
