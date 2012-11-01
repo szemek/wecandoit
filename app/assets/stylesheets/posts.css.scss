@@ -21,8 +21,22 @@ $wide: 95%;
 
 }
 
-span.username {
-  margin-left: 20px;
+.post-header {
+  background-color: #EFEFEF;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.post-avatar {
+  float: left;
+  vertical-align: middle;
+  width: 50px;
+  padding: 10px;
+}
+
+.post-username {
+  float: left;
+  padding-top: 10px;
   font-size: 22px;
   line-height: 26px;
   font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
@@ -30,27 +44,13 @@ span.username {
   color: #B22222;
 }
 
-.post-header {
-  background-color: #EFEFEF;
-}
-
-img.post-avatar {
-  vertical-align: middle;
-  width: 50px;
-  line-height: 30px;
-  padding-left : 10px;
-  padding-top : 10px;
-}
-
-span.date-info {
-  color: #aaa;
-}
-
-span.date-info-small {
-  color: #aaa;
-  font-size: 9px;
+.post-dateinfo {
+  float: right;
+  padding: 10px;
+  color: #666;
+  font-size: 10px;
   font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
-  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .project-box:hover .project-actions {
