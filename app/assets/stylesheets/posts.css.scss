@@ -10,7 +10,7 @@ $wide: 95%;
   position: relative;
   float: left;
   margin: 10px 10px 0 0;
-  border: 1px solid ;
+  border: 1px solid #D0D0D0;
   #border-radius: 20px;
   padding: 10px 10px;
   width: $wide;
@@ -21,8 +21,36 @@ $wide: 95%;
 
 }
 
+span.username {
+  margin-left: 20px;
+  font-size: 22px;
+  line-height: 26px;
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #B22222;
+}
+
+.post-header {
+  background-color: #EFEFEF;
+}
+
+img.post-avatar {
+  vertical-align: middle;
+  width: 50px;
+  line-height: 30px;
+  padding-left : 10px;
+  padding-top : 10px;
+}
+
 span.date-info {
   color: #aaa;
+}
+
+span.date-info-small {
+  color: #aaa;
+  font-size: 9px;
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  padding-left: 10px;
 }
 
 .project-box:hover .project-actions {
