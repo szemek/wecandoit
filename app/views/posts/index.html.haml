@@ -1,9 +1,9 @@
 - provide(:title, 'Wall')
 %h1 Wall of shame/blame/flame
 
+= link_to '+ Nowa wiadomość', new_post_path, :class => 'btn btn-primary'
+
 .posts
   - @posts.each do |post|
     = render post
 %br
-
-= link_to 'Nowy wpis', new_post_path
