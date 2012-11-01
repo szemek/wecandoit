@@ -17,7 +17,7 @@ pl:
         other: '%{count} sekund(y) temu'
       less_than_x_minutes:
         zero: 'mniej niż minuta temu'
-        one: '1 minuta'
+        one: '1 minuta temu'
         other: '%{count} minut(y) temu'
       x_minutes:
         one: '1 minuta temu'
