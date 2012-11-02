@@ -222,6 +222,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   newrelic_rpm
+  nokogiri
   oauth
   oauth2
   pg
