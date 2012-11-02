@@ -16,6 +16,7 @@ gem 'friendly_id', '>= 4.0.1'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'rails_autolink'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'sqlite3'
