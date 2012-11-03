@@ -48,24 +48,20 @@ $wide: 95%;
   padding-right: 10px;
 }
 
-.project-box:hover .project-actions {
+.post-box .post-actions {
+  position: absolute;
+  background: transparent;
+  color: white;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+}
+
+.post-box:hover .post-actions {
   opacity: 1;
-}
-
-.project-info {
-  height: 50%;
-  img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.project-details {
-  margin-top: -20px;
-}
-
-.half {
-  width: 50%;
 }
 
 #new_post textarea {

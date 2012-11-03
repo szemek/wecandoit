@@ -5,3 +5,9 @@
     .post-dateinfo{:title => localize(time_in_poland(post.date))}
       = distance_of_time_in_words(Time.now, post.date)
   %p.comment= raw auto_link(post.content.gsub("\n","<br/>"))
+  .post-actions
+    .btn-group
+      - if can?(:edit, post)
+        = link_to "Edytuj", edit_post_path(post), :class => "btn btn-success"
+      - if can?(:edit, post)
+        = link_to "Usuń", post_path(post), :confirm => 'Na pewno?', :method => :delete, :class => "btn btn-danger"
