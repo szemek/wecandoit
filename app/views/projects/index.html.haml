@@ -20,13 +20,13 @@
       .project-details
         .description
           %strong Opis projektu:
-          %span
+          %span= project.description
         .last-commit-message
           %strong Ostatni commit:
-          %span
+          %span= project.last_commit_message
         .last-commit-date
           %strong Data ostatniego commitu:
-          %span
+          %span= project.last_commit_date
       .project-actions
         .btn-group
           - if can?(:edit, project)

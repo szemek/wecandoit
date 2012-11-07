@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121026184628) do
+ActiveRecord::Schema.define(:version => 20121107203423) do
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
@@ -63,10 +63,11 @@ ActiveRecord::Schema.define(:version => 20121026184628) do
   create_table "projects", :force => true do |t|
     t.string   "username"
     t.string   "repo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "user_id"
     t.string   "website"
+    t.text     "github_data"
   end
 
   create_table "users", :force => true do |t|
