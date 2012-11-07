@@ -7,4 +7,5 @@
   - @posts.each do |post|
     = render post
 %br
+= render :partial => 'posts/form'
 %script{:type => "text/javascript"}$(document).ready(function(){$('.comment').emoticonize();});

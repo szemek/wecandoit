@@ -9,6 +9,8 @@ class PostsController < ApplicationController
 
     @user = User.find(current_user.id).username
 
+    @post = Post.new
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
