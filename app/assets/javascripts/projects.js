@@ -8,6 +8,16 @@ $(document).ready(function(){
       $(elem).find('.description span').text(data['description'])
       $(elem).find('.last-commit-message span').text(data['last_commit_message'])
       $(elem).find('.last-commit-date span').text(data['last_commit_date'])
+
+      $.post('/projects/' + id, {
+          _method: 'PUT',
+          project: {
+            description: data['description'],
+            last_commit_message: data['last_commit_message'],
+            last_commit_date: data['last_commit_date'],
+            gravatar: data['gravatar']
+          }
+      });
     })
   })
 })

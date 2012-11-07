@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessible :repo, :username, :website
+  attr_accessible :repo, :username, :website, :gravatar, :description, :last_commit_date, :last_commit_message
 
   belongs_to :user
 
