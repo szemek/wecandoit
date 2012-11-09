@@ -27,7 +27,7 @@ class GithubData
     end
   end
 
-  def as_json(options = {})
+  def to_hash(options = {})
     hash = {}
 
     hash['gravatar'] = @gravatar
@@ -36,6 +36,10 @@ class GithubData
     hash['last_commit_date'] = @last_commit_date
 
     hash
+  end
+
+  def as_json(options = {})
+    self.to_hash
   end
 
   private
