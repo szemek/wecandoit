@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'rails_autolink'
 gem 'nokogiri'
+gem 'pusher'
 
 group :development, :test do
   gem 'sqlite3'
