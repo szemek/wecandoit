@@ -4,7 +4,16 @@
 
 = render :partial => 'posts/form'
 
-.posts
+.posts{'data-bind' => 'foreach: posts'}
+  .post-box
+    .post-header
+      .post-avatar
+        %img{'data-bind' => 'attr: { src: avatar }'}
+      .post-username{'data-bind' => 'text: username'}
+      .post-dateinfo{'data-bind' => 'text: distance, attr: { title: date }'}
+    %p.comment{'data-bind' => 'text: comment'}
+    .post-actions
+      .btn-group
   - @posts.each do |post|
     = render post
 %br
