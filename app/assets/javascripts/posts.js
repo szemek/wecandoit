@@ -1,9 +1,10 @@
-function Post(avatar, username, date, distance, comment){
+function Post(avatar, username, date, distance, comment, actions){
   this.avatar = avatar;
   this.username = username;
   this.date = date;
   this.distance = distance;
   this.comment = comment;
+  this.actions = actions;
 }
 
 function PostListModelView(){
@@ -20,12 +21,9 @@ function PostListModelView(){
 
 $(document).ready(function(){
   mv = new PostListModelView();
-  mv.addPost(new Post(
-    "/assets/logos/octocat.png",
-    "szemek",
-    "14 lis 2012, o 20:23",
-    "1 minuta temu",
-    "Hello world!"
-  ));
+  $.getJSON("/posts", function(posts){
+    for(i in posts)
+      mv.addPost(posts[i]);
+  });
   ko.applyBindings(mv);
 });
