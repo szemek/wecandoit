@@ -13,9 +13,7 @@
       .post-dateinfo{'data-bind' => 'text: distance, attr: { title: date }'}
     %p.comment{'data-bind' => 'text: comment'}
     .post-actions
-      .btn-group
-  - @posts.each do |post|
-    = render post
+      .btn-group{'data-bind' => 'html: actions'}
 %br
 
 

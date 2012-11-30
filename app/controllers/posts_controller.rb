@@ -13,7 +13,9 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @posts }
+      format.json do
+        render json: PostDecorator.decorate(@posts)
+      end
     end
   end
 
@@ -24,7 +26,9 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @post }
+      format.json do
+        render json: PostDecorator.decorate(@post)
+      end
     end
   end
 
