@@ -8,6 +8,6 @@
 
   .field
     = f.label 'Wpisz wiadomość:'
-    = f.text_area :content
+    = f.text_area :content, 'data-bind' => 'value: newPostContent, valueUpdate: "afterkeydown"'
   .actions
-    = f.submit 'Zapisz', :class => "btn btn-primary"
+    = f.submit 'Zapisz', :class => "btn btn-primary", 'data-bind' => 'enable: newPostContent().length > 0'

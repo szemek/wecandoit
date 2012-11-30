@@ -10,6 +10,8 @@ function Post(avatar, username, date, distance, comment, actions){
 function PostListModelView(){
   // Data
   this.posts = ko.observableArray([]);
+
+  this.newPostContent = ko.observable("");
   // Operations
   this.addPost = function(post){
     this.posts.push(post);
