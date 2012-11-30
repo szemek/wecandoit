@@ -58,7 +58,9 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
+        format.json do
+          render json: PostDecorator.decorate(@post), status: :created, location: @post
+        end
       else
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }

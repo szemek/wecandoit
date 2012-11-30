@@ -9,23 +9,22 @@ function Post(avatar, username, date, distance, comment, actions){
 
 function PostListModelView(){
   // Data
-  this.posts = ko.observableArray([]);
+  var self = this;
+  self.posts = ko.observableArray([]);
 
-  this.newPostContent = ko.observable("");
+  self.newPostContent = ko.observable("");
   // Operations
-  this.addPost = function(post){
-    this.posts.push(post);
+  self.addPost = function(){
+    $.post('/posts', $('#new_post').serialize(), function(data){
+      self.posts.push(data);
+    }, 'json');
   }
-  this.removePost = function(post){
-    this.posts.remove(post);
+  self.removePost = function(post){
+    self.posts.remove(post);
   }
 }
 
 $(document).ready(function(){
   mv = new PostListModelView();
-  $.getJSON("/posts", function(posts){
-    for(i in posts)
-      mv.addPost(posts[i]);
-  });
   ko.applyBindings(mv);
 });
