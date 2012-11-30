@@ -11,7 +11,7 @@
         %img{'data-bind' => 'attr: { src: avatar }'}
       .post-username{'data-bind' => 'text: username'}
       .post-dateinfo{'data-bind' => 'text: distance, attr: { title: date }'}
-    %p.comment{'data-bind' => 'text: comment'}
+    %p.comment{'data-bind' => 'html: comment'}
     .post-actions
       .btn-group{'data-bind' => 'html: actions'}
 %br
