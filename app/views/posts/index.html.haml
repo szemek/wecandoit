@@ -4,7 +4,7 @@
 
 = render :partial => 'posts/form'
 
-.posts{'data-bind' => 'foreach: posts'}
+.posts{'data-bind' => 'foreach: posts.slice(0).reverse()'}
   .post-box
     .post-header
       .post-avatar

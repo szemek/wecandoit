@@ -7,6 +7,10 @@ function Post(avatar, username, date, distance, comment, actions){
   this.actions = actions;
 }
 
+var TextArea = {
+  clear: function(){ $('textarea').val("") }
+}
+
 function PostListModelView(){
   // Data
   var self = this;
@@ -17,6 +21,7 @@ function PostListModelView(){
   self.addPost = function(){
     $.post('/posts', $('#new_post').serialize(), function(data){
       self.posts.push(data);
+      TextArea.clear();
     }, 'json');
   }
   self.removePost = function(post){
