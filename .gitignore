@@ -16,3 +16,4 @@
 /trash
 .sass-cache
 tags
+*.vim
