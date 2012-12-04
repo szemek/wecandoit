@@ -2,7 +2,8 @@
 
 %h1 Wall of shame/blame/flame
 
-= render :partial => 'posts/form'
+- if current_user.present?
+  = render :partial => 'posts/form'
 
 .posts{'data-bind' => 'foreach: posts.slice(0).reverse()'}
   .post-box

@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.joins(:user).order('created_at DESC')
 
-    @user = User.find(current_user.id).username
+    @user = current_user.username if current_user.present?
 
     @post = Post.new
 
