@@ -35,7 +35,7 @@ function PostListModelView(){
 $(document).ready(function(){
   mv = new PostListModelView();
   $.getJSON("/posts", function(posts){
-    for(var i = 0; i < posts.length; i++)
+    for(var i = posts.length - 1; i >= 0; i--)
       mv.addPost(posts[i]);
   });
   ko.applyBindings(mv);
