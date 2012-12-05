@@ -1,4 +1,4 @@
-= form_for @post, :html => {'data-bind' => 'submit: addPost'}  do |f|
+= form_for @post, :html => {'data-bind' => 'submit: createPost'}  do |f|
   - if @post.errors.any?
     #error_explanation
       %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"

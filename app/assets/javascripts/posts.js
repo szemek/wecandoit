@@ -18,7 +18,10 @@ function PostListModelView(){
 
   self.newPostContent = ko.observable("");
   // Operations
-  self.addPost = function(){
+  self.addPost = function(post){
+    self.posts.push(post);
+  };
+  self.createPost = function(){
     $.post('/posts', $('#new_post').serialize(), function(data){
       self.posts.push(data);
       TextArea.clear();
@@ -31,5 +34,9 @@ function PostListModelView(){
 
 $(document).ready(function(){
   mv = new PostListModelView();
+  $.getJSON("/posts", function(posts){
+    for(var i = 0; i < posts.length; i++)
+      mv.addPost(posts[i]);
+  });
   ko.applyBindings(mv);
 });
