@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 gem 'jquery-rails'
 gem 'haml-rails', '>= 0.3.4'
 
@@ -21,6 +21,8 @@ gem 'pusher'
 gem 'draper'
 
 group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'sqlite3'
   gem 'awesome_print'
   gem 'rspec-rails'
