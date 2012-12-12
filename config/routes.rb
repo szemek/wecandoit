@@ -1,23 +1,18 @@
 WeCanDoIt::Application.routes.draw do
-  resources :posts
-  resources :photos
-  resources :guides
+  root :to => 'home#index'
 
   resources :projects do
     member { get 'details' }
   end
-
-  resources :questions do
-    resources :answers
-  end
-
-  root :to => 'home#index'
   resources :links
-  resources :home
-  get "home/index"
+  resources :guides
+  resources :photos
+  resources :posts
+
   get '/about' => 'home#about'
   get '/tree' => 'home#tree'
   get '/calendar' => 'home#calendar'
+  get '/wall' => 'posts#index'
 
   get "/oauth/github" => 'oauth/github#new'
   get "/oauth/github/callback" => 'oauth/github#create'
@@ -25,7 +20,6 @@ WeCanDoIt::Application.routes.draw do
   get "/login" => 'oauth/sessions#new', :as => :login
   get "/logout" => 'oauth/sessions#destroy', :as => :logout
 
-  get "wall" => 'wall#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
