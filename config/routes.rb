@@ -13,6 +13,7 @@ WeCanDoIt::Application.routes.draw do
   get '/tree' => 'home#tree'
   get '/calendar' => 'home#calendar'
   get '/wall' => 'posts#index'
+  get '/chat/:channel' => 'chat#channel'
 
   get "/oauth/github" => 'oauth/github#new'
   get "/oauth/github/callback" => 'oauth/github#create'
