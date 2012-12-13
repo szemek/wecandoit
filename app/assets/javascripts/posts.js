@@ -20,10 +20,11 @@ function PostListModelView(){
   // Operations
   self.addPost = function(post){
     self.posts.push(post);
+    $('.comment').emoticonize();
   };
   self.createPost = function(){
     $.post('/posts', $('#new_post').serialize(), function(data){
-      self.posts.push(data);
+      self.addPost(data);
       TextArea.clear();
     }, 'json');
   }
@@ -33,10 +34,12 @@ function PostListModelView(){
 }
 
 $(document).ready(function(){
-  mv = new PostListModelView();
-  $.getJSON("/posts", function(posts){
-    for(var i = posts.length - 1; i >= 0; i--)
+  $('.posts').each(function(){
+    mv = new PostListModelView();
+    $.getJSON("/posts", function(posts){
+      for(var i = posts.length - 1; i >= 0; i--)
       mv.addPost(posts[i]);
+    });
+    ko.applyBindings(mv);
   });
-  ko.applyBindings(mv);
 });
