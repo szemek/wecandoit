@@ -3,5 +3,6 @@ class ChatController < ApplicationController
   end
 
   def channel
+    @messages = Message.where(:channel => params[:channel])
   end
 end

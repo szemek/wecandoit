@@ -1,0 +1,15 @@
+- provide(:title, 'Chat')
+
+#chat
+  %h1 Chat
+
+  .messages{'data-bind' => 'foreach: messages, visible: messages().length > 0'}
+    .message
+      %strong{'data-bind' => 'text: content'}
+
+  = form_for Message.new, :html => {'data-bind' => 'submit: createMessage'}  do |f|
+    .fields
+      = hidden_field_tag 'message[channel]', params[:channel]
+      = f.text_area :content, 'data-bind' => 'value: newMessageContent, valueUpdate: "afterkeydown"'
+    .actions
+      = f.submit 'Wyślij', :class => "btn btn-primary", 'data-bind' => 'enable: newMessageContent().length > 0'
