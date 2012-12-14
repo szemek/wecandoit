@@ -19,6 +19,7 @@ gem 'rails_autolink'
 gem 'nokogiri'
 gem 'pusher'
 gem 'draper'
+gem 'mongoid'
 
 group :development, :test do
   gem 'better_errors'
