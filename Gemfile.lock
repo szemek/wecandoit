@@ -56,6 +56,8 @@ GEM
     cloudinary (1.0.40)
       aws_cf_signer
       rest-client
+    codemirror-rails (3.00)
+      railties (~> 3.0)
     coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -72,6 +74,7 @@ GEM
       activesupport (~> 3.2)
     erubis (2.7.0)
     eventmachine (1.0.0)
+    eventmachine (1.0.0-x86-mingw32)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.0.0)
@@ -239,6 +242,7 @@ DEPENDENCIES
   carrierwave
   choices
   cloudinary
+  codemirror-rails
   coffee-rails (~> 3.2.1)
   database_cleaner
   draper
