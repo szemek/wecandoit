@@ -8,6 +8,7 @@ WeCanDoIt::Application.routes.draw do
   resources :guides
   resources :photos
   resources :posts
+  resources :messages
 
   get '/about' => 'home#about'
   get '/tree' => 'home#tree'
