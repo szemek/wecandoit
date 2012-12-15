@@ -38,5 +38,12 @@ $(document).ready(function(){
     });
     ko.applyBindings(mv);
   });
+
+  $('textarea').on('keypress', function(event){
+    var Key = {Enter: 13};
+    if(!event.shiftKey && (event.which == Key.Enter || event.keyCode == Key.Enter)){
+      $('form').trigger('submit');
+    }
+  });
 });
 
