@@ -7,6 +7,7 @@ class MessageDecorator < Draper::Base
   def to_hash
     hash = {}
 
+    hash[:id] = id
     hash[:channel] = channel
     hash[:content] = content
     hash[:username] = username
