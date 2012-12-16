@@ -5,7 +5,8 @@
 
   .messages{'data-bind' => 'foreach: messages, visible: messages().length > 0'}
     .message
-      %strong{'data-bind' => 'text: content'}
+      %strong{'data-bind' => 'text: username'}
+      %span{'data-bind' => 'text: content'}
 
   = form_for Message.new, :html => {'data-bind' => 'submit: createMessage'}  do |f|
     .fields

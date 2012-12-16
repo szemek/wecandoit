@@ -1,6 +1,7 @@
-function Message(channel, content){
+function Message(channel, content, username){
   this.channel = channel;
   this.content = content;
+  this.username = username;
 }
 
 var TextArea = {
@@ -32,7 +33,7 @@ $(document).ready(function(){
   var mv = new MessageListModelView();
 
   $('.message').each(function(){
-    channel = location.pathname.replace(/.+\W([a-zA-Z0-9]+)$/, '$1');
+    var channel = location.pathname.replace(/.+\W([a-zA-Z0-9]+)$/, '$1');
     $.getJSON("/messages?channel=" + channel, function(messages){
       for(var i = 0; i < messages.length; i++)
         mv.addMessage(messages[i]);
@@ -43,7 +44,7 @@ $(document).ready(function(){
   $('textarea').on('keypress', function(event){
     var Key = {Enter: 13};
     if(!event.shiftKey && (event.which == Key.Enter || event.keyCode == Key.Enter)){
-      $('form').trigger('submit');
+      mv.createMessage();
     }
   });
 

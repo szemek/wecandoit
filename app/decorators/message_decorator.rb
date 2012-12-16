@@ -9,6 +9,7 @@ class MessageDecorator < Draper::Base
 
     hash[:channel] = channel
     hash[:content] = content
+    hash[:username] = username
 
     hash
   end
