@@ -33,29 +33,31 @@ function MessageListModelView(){
 }
 
 $(document).ready(function(){
-  var mv = new MessageListModelView();
+  $('.messages').each(function(){
+    var mv = new MessageListModelView();
 
-  $('.message').each(function(){
-    var channel = location.pathname.replace(/.+\W([a-zA-Z0-9]+)$/, '$1');
-    $.getJSON("/messages?channel=" + channel, function(messages){
-      for(var i = 0; i < messages.length; i++)
-        mv.addMessage(messages[i]);
+    $('.message').each(function(){
+      var channel = location.pathname.replace(/.+\W([a-zA-Z0-9]+)$/, '$1');
+      $.getJSON("/messages?channel=" + channel, function(messages){
+        for(var i = 0; i < messages.length; i++)
+          mv.addMessage(messages[i]);
+      });
+      ko.applyBindings(mv);
     });
-    ko.applyBindings(mv);
-  });
 
-  $('textarea').on('keypress', function(event){
-    var Key = {Enter: 13};
-    if(!event.shiftKey && (event.which == Key.Enter || event.keyCode == Key.Enter)){
-      mv.createMessage();
-    }
-  });
+    $('textarea').on('keypress', function(event){
+      var Key = {Enter: 13};
+      if(!event.shiftKey && (event.which == Key.Enter || event.keyCode == Key.Enter)){
+        mv.createMessage();
+      }
+    });
 
-  var channel = location.pathname.replace(/.+\W(\w+)$/, '$1');
-  var pusher = new Pusher('4a0c86f04ddd676b60af');
-  var connection = pusher.subscribe(channel);
-  connection.bind('message', function(data) {
-    mv.addMessage(data);
+    var channel = location.pathname.replace(/.+\W(\w+)$/, '$1');
+    var pusher = new Pusher('4a0c86f04ddd676b60af');
+    var connection = pusher.subscribe(channel);
+    connection.bind('message', function(data) {
+      mv.addMessage(data);
+    });
   });
 });
 
