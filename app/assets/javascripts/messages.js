@@ -29,8 +29,9 @@ function MessageListModelView(){
 }
 
 $(document).ready(function(){
+  var mv = new MessageListModelView();
+
   $('.message').each(function(){
-    mv = new MessageListModelView();
     channel = location.pathname.replace(/.+\W([a-zA-Z0-9]+)$/, '$1');
     $.getJSON("/messages?channel=" + channel, function(messages){
       for(var i = 0; i < messages.length; i++)
@@ -44,6 +45,13 @@ $(document).ready(function(){
     if(!event.shiftKey && (event.which == Key.Enter || event.keyCode == Key.Enter)){
       $('form').trigger('submit');
     }
+  });
+
+  var channel = location.pathname.replace(/.+\W(\w+)$/, '$1');
+  var pusher = new Pusher('4a0c86f04ddd676b60af');
+  var connection = pusher.subscribe(channel);
+  connection.bind('message', function(data) {
+    mv.addMessage(data);
   });
 });
 

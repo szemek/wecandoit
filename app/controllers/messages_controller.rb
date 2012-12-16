@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+        Pusher[@message.channel].trigger('message', MessageDecorator.decorate(@message).to_hash)
         format.json { render :json => @message }
       else
         format.json { render :json => @message.errors, status: :unprocessable_entity }

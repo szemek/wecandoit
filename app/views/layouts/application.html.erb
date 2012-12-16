@@ -5,9 +5,10 @@
   <title>We can do it! &raquo; <%= yield(:title) %></title>
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-  <%= favicon_link_tag %>   
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= favicon_link_tag %>
+  <%= stylesheet_link_tag    'application', :media => 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'http://js.pusher.com/1.12/pusher.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
