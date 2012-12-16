@@ -5,6 +5,7 @@
 
   .messages{'data-bind' => 'foreach: messages, visible: messages().length > 0'}
     .message
+      .hidden{'data-bind' => 'value: id, uniqueName: true'}
       %strong{'data-bind' => 'text: username'}
       %span{'data-bind' => 'text: content'}
 

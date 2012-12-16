@@ -1,7 +1,8 @@
-function Message(channel, content, username){
+function Message(channel, content, username, id){
   this.channel = channel;
   this.content = content;
   this.username = username;
+  this.id = id;
 }
 
 var TextArea = {
@@ -16,7 +17,9 @@ function MessageListModelView(){
   self.newMessageContent = ko.observable("");
   // Operations
   self.addMessage = function(message){
-    self.messages.push(message);
+    if(self.messages().every(function(m){ return m.id != message.id;})){
+      self.messages.push(message);
+    }
   };
   self.createMessage = function(){
     $.post('/messages', $('#new_message').serialize(), function(data){

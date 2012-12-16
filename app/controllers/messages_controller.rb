@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
     messages = Message.where(:channel => params[:channel])
 
     respond_to do |format|
-      format.json { render :json => messages }
+      format.json { render :json => MessageDecorator.decorate(messages) }
     end
   end
 
@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.json { render :json => @message }
+        format.json { render :json => MessageDecorator.decorate(@message) }
       else
         format.json { render :json => @message.errors, status: :unprocessable_entity }
       end
