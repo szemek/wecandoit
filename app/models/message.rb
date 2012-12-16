@@ -2,6 +2,7 @@ class Message
   include Mongoid::Document
   field :channel, type: String
   field :content, type: String
+  field :username, type: String
 
   after_save :push_message
 
