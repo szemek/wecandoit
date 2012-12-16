@@ -20,7 +20,6 @@ function PostListModelView(){
   // Operations
   self.addPost = function(post){
     self.posts.push(post);
-    $('.comment').emoticonize();
   };
   self.createPost = function(){
     $.post('/posts', $('#new_post').serialize(), function(data){
