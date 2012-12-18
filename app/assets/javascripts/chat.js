@@ -5,6 +5,7 @@
 $(document).ready(function(){
   var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
-    mode: 'ruby'
+    mode: 'ruby',
+    theme: 'cobalt'
   });
 });
