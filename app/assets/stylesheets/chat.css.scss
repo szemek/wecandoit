@@ -1,5 +1,33 @@
+/*
+ *= require codemirror
+ */
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: 500px;
+  width: 600px;
+}
+
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+#main {
+  overflow: visible;
+}
+
+#codemirror {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  border: 1px dotted #aaa;
+}
+
 #chat {
-  float: right;
+  position: absolute;
+  top: 40px;
+  right: 0;
 }
 
 #message_content {
