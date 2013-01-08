@@ -15,5 +15,6 @@
     %p.comment{'data-bind' => 'html: comment'}
     .post-actions
       .btn-group{'data-bind' => 'html: actions'}
-%br
-
+.static
+  -@posts.each do |post|
+    = render post
