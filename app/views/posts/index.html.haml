@@ -5,7 +5,7 @@
 - if current_user.present?
   = render :partial => 'posts/form'
 
-.posts{'data-bind' => 'foreach: posts.slice(0).reverse(), visible: posts().length > 0'}
+.posts.dynamic{'data-bind' => 'foreach: posts.slice(0).reverse(), visible: posts().length > 0'}
   .post-box
     .post-header
       .post-avatar
@@ -15,6 +15,6 @@
     %p.comment{'data-bind' => 'html: comment'}
     .post-actions
       .btn-group{'data-bind' => 'html: actions'}
-.static
+.posts.static
   -@posts.each do |post|
     = render post
