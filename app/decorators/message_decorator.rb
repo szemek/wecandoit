@@ -1,16 +1,14 @@
 # encoding: UTF-8
-class MessageDecorator < Draper::Base
+class MessageDecorator < Draper::Decorator
   include Draper::LazyHelpers
-
-  decorates :message
 
   def to_hash
     hash = {}
 
-    hash[:id] = id
-    hash[:channel] = channel
-    hash[:content] = content
-    hash[:username] = username
+    hash[:id] = model.id
+    hash[:channel] = model.channel
+    hash[:content] = model.content
+    hash[:username] = model.username
 
     hash
   end

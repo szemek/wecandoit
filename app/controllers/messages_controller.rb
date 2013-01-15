@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
     messages = Message.where(:channel => params[:channel])
 
     respond_to do |format|
-      format.json { render :json => MessageDecorator.decorate(messages) }
+      format.json { render :json => MessageDecorator.decorate_collection(messages) }
     end
   end
 
