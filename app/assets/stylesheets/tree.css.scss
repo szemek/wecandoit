@@ -1,10 +1,6 @@
-#main {
-  position: relative;
-}
-
 #description {
-  position: absolute;
+  position: fixed;
   top: 60px;
-  left: 400px;
-  margin-right: 110px;
+  left: 50%;
+  width: 40%;
 }
