@@ -33,7 +33,7 @@ function PostListModelView(){
 }
 
 $(document).ready(function(){
-  $('.posts').each(function(){
+  $('.posts.dynamic').each(function(){
     mv = new PostListModelView();
     ko.applyBindings(mv);
   });
