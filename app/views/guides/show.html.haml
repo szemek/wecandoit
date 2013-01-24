@@ -5,6 +5,7 @@
 
 = markdown @guide.content
 
-= link_to 'Edycja', edit_guide_path(@guide)
-\|
+- if can?(:edit, @guide)
+  = link_to('Edytuj', edit_guide_path(@guide)) 
+  \|
 = link_to 'Wróć do listy', guides_path
