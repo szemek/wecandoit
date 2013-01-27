@@ -4,6 +4,8 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
+  # GET /wall
+  # GET /wall.rss
   def index
     @posts = Post.joins(:user).order('created_at DESC')
 
@@ -16,6 +18,7 @@ class PostsController < ApplicationController
       format.json do
         render json: PostDecorator.decorate_collection(@posts)
       end
+      format.rss
     end
   end
 
