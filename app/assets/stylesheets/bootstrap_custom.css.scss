@@ -128,3 +128,14 @@ h1, h2, h3, h4 {
     margin-bottom: 10px;
   }
 }
+  @media (min-width: 980px) {
+  #main {
+    padding-top: 40px;
+  }
+  .navbar-fixed-top {
+    margin-bottom: 40px;
+  }
+  body {
+    margin: 20px;
+  }
+}
