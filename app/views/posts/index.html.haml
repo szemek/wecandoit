@@ -1,8 +1,8 @@
 - provide(:title, 'Wall')
 
 %h1
-  Wall of shame/blame/flame
-  .pull-right= link_to image_tag('rss.png'), '/wall.rss'
+  Wall of shame /blame /flame
+.pull-right= link_to image_tag('rss.png'), '/wall.rss'
 
 - if current_user.present?
   = render :partial => 'posts/form'
