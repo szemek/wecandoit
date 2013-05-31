@@ -25,6 +25,7 @@ gem 'draper'
 gem 'mongoid'
 gem 'codemirror-rails'
 gem 'acts-as-taggable-on'
+gem 'octokit'
 
 group :development, :test do
   gem 'better_errors'

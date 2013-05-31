@@ -1,21 +1,12 @@
-require 'open-uri'
-require 'json'
-
 class GithubData
-  def initialize(username, repository)
-    @username = username
-    @repository = repository
-
-    @gravatar = nil
-    @description = nil
-    @last_commit_message = nil
-    @last_commit_date = nil
+  def initialize(username, repo)
+    @repository = Octokit::Repository.new({:username => username, :repo => repo})
   end
 
   def fetch!
     begin
-      repository_details = JSON.parse(open(repository_url).read)
-      commits_details = JSON.parse(open(commits_url).read)
+      repository_details = Octokit.repo(@repository)
+      commits_details = Octokit.commits(@repository)
 
       @gravatar = repository_details['owner']['avatar_url']
       @description = repository_details['description']
@@ -41,13 +32,4 @@ class GithubData
   def as_json(options = {})
     self.to_hash
   end
-
-  private
-    def repository_url
-      "https://api.github.com/repos/#{@username}/#{@repository}"
-    end
-
-    def commits_url
-      "https://api.github.com/repos/#{@username}/#{@repository}/commits"
-    end
 end
