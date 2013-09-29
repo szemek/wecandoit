@@ -11,8 +11,6 @@
         %ul.nav.pull-right
           %li{:class => (:active  if current_page?(about_path))}
             = link_to 'O nas', about_path
-          %li{:class => (:active if current_page?(calendar_path))}
-            = link_to 'Kalendarz', calendar_path
           %li{:class => (:active if nav_helper('projects'))}
             = link_to 'Projekty', projects_path
           %li{:class => (:active if nav_helper('links'))}
