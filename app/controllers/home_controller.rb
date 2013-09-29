@@ -5,9 +5,6 @@ class HomeController < ApplicationController
   def about
   end
 
-  def calendar
-  end
-
   def tree
   end
 end
