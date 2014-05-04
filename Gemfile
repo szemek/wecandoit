@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.17'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml-rails', '>= 0.3.4'
@@ -26,6 +26,7 @@ gem 'mongoid'
 gem 'codemirror-rails'
 gem 'acts-as-taggable-on'
 gem 'octokit'
+gem 'thin'
 
 group :development, :test do
   gem 'better_errors'
@@ -45,7 +46,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'thin'
   gem 'rails_12factor'
 end
 
