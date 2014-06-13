@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
-gem 'rails', '3.2.17'
+gem 'rails', '3.2.18'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml-rails', '>= 0.3.4'
