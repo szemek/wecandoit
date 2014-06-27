@@ -17,3 +17,4 @@
 .sass-cache
 tags
 *.vim
+.env
