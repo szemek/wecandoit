@@ -40,7 +40,7 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(params[:photo])
+    @photo = Photo.new(photo_params)
 
     respond_to do |format|
       if @photo.save
@@ -59,7 +59,7 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
 
     respond_to do |format|
-      if @photo.update_attributes(params[:photo])
+      if @photo.update_attributes(photo_params)
         format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
         format.json { head :no_content }
       else
@@ -79,5 +79,11 @@ class PhotosController < ApplicationController
       format.html { redirect_to photos_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def photo_params
+    params.require(:photo).permit(:description, :picture)
   end
 end
