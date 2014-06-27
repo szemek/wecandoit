@@ -4,7 +4,7 @@ class Oauth::GithubController < ApplicationController
 
   def new
     if Rails.env == "development"
-      user = User.find_or_create_by_username(:username => "test", :avatar_url => "/assets/logos/octocat.png")
+      user = User.find_or_create_by(:username => "test", :avatar_url => "/assets/logos/octocat.png")
       session[:user_id] = user.id
       redirect_to '/'
     else
