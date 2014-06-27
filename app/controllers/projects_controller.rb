@@ -6,7 +6,6 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
-    @projects.shuffle!
 
     respond_to do |format|
       format.html # index.html.erb
