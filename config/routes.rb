@@ -17,11 +17,9 @@ Rails.application.routes.draw do
   get '/chat' => 'chat#index'
   get '/chat/:channel' => 'chat#channel'
 
-  get "/oauth/github" => 'oauth/github#new'
-  get "/oauth/github/callback" => 'oauth/github#create'
-
-  get "/login" => 'oauth/sessions#new', :as => :login
-  get "/logout" => 'oauth/sessions#destroy', :as => :logout
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/login' => redirect('/auth/github')
+  delete '/logout' => 'sessions#destroy'
 
 
   # The priority is based upon order of creation:
