@@ -40,7 +40,7 @@ class GuidesController < ApplicationController
   # POST /guides
   # POST /guides.json
   def create
-    @guide = Guide.new(params[:guide])
+    @guide = Guide.new(guide_params)
     @guide.user_id = current_user.id
 
     respond_to do |format|
@@ -60,7 +60,7 @@ class GuidesController < ApplicationController
     @guide = Guide.find(params[:id])
 
     respond_to do |format|
-      if @guide.update_attributes(params[:guide])
+      if @guide.update_attributes(guide_params)
         format.html { redirect_to @guide, notice: 'Guide was successfully updated.' }
         format.json { head :no_content }
       else
@@ -80,5 +80,11 @@ class GuidesController < ApplicationController
       format.html { redirect_to guides_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def guide_params
+    params.require(:guide).permit(:title, :content)
   end
 end
