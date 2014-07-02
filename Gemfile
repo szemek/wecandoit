@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'rails', '4.1.2'
+gem 'rails', '4.1.3'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml-rails', '>= 0.3.4'
