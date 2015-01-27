@@ -13,12 +13,4 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by_id(session[:user_id])
   end
   helper_method :current_user
-
-  before_filter :domain_redirection
-
-  def domain_redirection
-    if Rails.env.production? && request.host != 'wecandoit.onrails.pl'
-      redirect_to("http://wecandoit.onrails.pl")
-    end
-  end
 end
